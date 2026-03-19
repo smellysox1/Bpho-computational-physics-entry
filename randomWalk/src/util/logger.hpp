@@ -6,7 +6,6 @@
 #include <fstream>
 #include <sstream>
 
-#include "../global.hpp"
 
 #define WC2_LOG(...) logger::log(__FILE__, __LINE__, __VA_ARGS__)
 #define WC2_WARN(...) logger::warn(__FILE__, __LINE__, __VA_ARGS__)
