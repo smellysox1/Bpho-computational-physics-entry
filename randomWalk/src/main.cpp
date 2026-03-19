@@ -39,16 +39,18 @@ int main() {
 	int SCREEN_HEIGHT = window.getSize().y;
 	window.setTitle("random wlak");
 	pathVisualiser path;
-	int n=10000;
+	int n=50000;
 	int step=20;
 	path.add_vertex({ float(SCREEN_WIDTH/2),float(SCREEN_HEIGHT/2) }, sf::Color::White);
 	for (int i = 0; i < n; i++) {
 		sf::Color colour(255 * random::randomFloat(), 255 * random::randomFloat(), 255 * random::randomFloat());
 		float angle = random::randomFloat() * 2 * 3.141592;
 		//placeholder for pi will fix later
-		float x = SCREEN_WIDTH;
-		float y = SCREEN_HEIGHT;
-		while (x >= SCREEN_WIDTH && y >= SCREEN_HEIGHT) {//check if escaped screen
+		sf::Vector2f last = path.lastVertex();
+		float x = last.x + step * sin(angle);
+		float y = last.y + step * cos(angle);
+		while(x >= SCREEN_WIDTH || y >= SCREEN_HEIGHT||y<0||x<0) {//check if escaped screen
+			angle = random::randomFloat() * 2 * 3.141592;
 			x = path.lastVertex().x + step * sin(angle);
 			y = path.lastVertex().y + step * cos(angle);
 		}
