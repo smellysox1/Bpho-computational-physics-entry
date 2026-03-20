@@ -23,3 +23,10 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
 	sfml-network
     sfml-audio
 )
+
+add_custom_command(
+TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+COMMAND ${CMAKE_COMMAND} -E copy_if_different
+		"${CMAKE_SOURCE_DIR}/resources/arial.ttf" ${CMAKE_BINARY_DIR}
+COMMAND_EXPAND_LISTS
+)

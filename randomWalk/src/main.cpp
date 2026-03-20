@@ -7,6 +7,7 @@
 #include <random>
 #include <iostream>
 #include <vector>
+#include <filesystem>
 
 // PARAMETERS
 
@@ -70,11 +71,20 @@ int main() {
 		path.add_vertex(i, {x,y}, colour);
 	}
 
+	sf::View camera({0, 0, SCREEN_WIDTH, SCREEN_HEIGHT});
+
+	sf::Font font;
+	if (!font.loadFromFile("arial.ttf")) {
+		std::cerr << "Could not load font." << "\n";
+	}
+
+	float zoom = 1.0f;
 	sf::Vector2i previousMousePos;
 	bool dragging = false;
 
-	//the drawing only needs to happen once.
 	while (window.isOpen()) {
+		sf::Vector2i mousepos = sf::Mouse::getPosition();
+
 		sf::Event event;
 		while (window.pollEvent(event)) {
 			switch (event.type) {
@@ -83,13 +93,12 @@ int main() {
 					window.close();
 					break;
 				case sf::Event::MouseButtonPressed:
+					previousMousePos = mousepos;
 					dragging = true;
-					previousMousePos = sf::Mouse::getPosition(window);
 					break;
 				case sf::Event::MouseMoved:
 					if (dragging) {
-						sf::Vector2i mousepos = sf::Mouse::getPosition(window);
-						path.move(sf::Vector2f(mousepos - previousMousePos));
+						camera.move(sf::Vector2f(previousMousePos - mousepos) * zoom);
 						previousMousePos = mousepos;
 					}
 					break;
@@ -97,15 +106,18 @@ int main() {
 					dragging = false;
 					break;
 				case sf::Event::MouseWheelScrolled:
-					sf::Vector2i mousepos = sf::Mouse::getPosition(window);
-					path.setOrigin(sf::Vector2f(mousepos) - path.getVertices().getBounds().getPosition());
-					path.scale(1.0f + event.mouseWheelScroll.delta, 1.0f + event.mouseWheelScroll.delta);
+					zoom *= 1.0f + event.mouseWheelScroll.delta;
+					camera.zoom(1.0f + event.mouseWheelScroll.delta);
 					break;
 			}
 		}
 
 		window.clear();
+
+		window.setView(camera);
+
 		window.draw(path);
+
 		window.display();
 	}
 }
