@@ -11,10 +11,10 @@
 
 // PARAMETERS
 
-const int n = 10000;
+const int n = 11;
 const int step = 20;
 
-std::mt19937 rng{ static_cast<std::mt19937::result_type>(std::chrono::steady_clock::now().time_since_epoch().count()) };
+std::mt19937 rng{ static_cast<std::mt19937::result_type>(30449350) };
 
 class pathVisualiser : public sf::Drawable, public sf::Transformable {
 public:
@@ -63,7 +63,7 @@ int main() {
 	for (int i = 1; i < n; i++) {
 		sf::Color colour(255 * randomFloat(), 255 * randomFloat(), 255 * randomFloat());
 
-		float angle = randomFloat() * 2 * M_PI;
+		float angle = randomFloat() * 2 * 3.141592;
 
 		float x = path.lastVertex().x + step * sin(angle);
 		float y = path.lastVertex().y + step * cos(angle);
@@ -71,12 +71,9 @@ int main() {
 		path.add_vertex(i, {x,y}, colour);
 	}
 
-	sf::View camera({0, 0, SCREEN_WIDTH, SCREEN_HEIGHT});
+	sf::View camera({0,0,float(SCREEN_WIDTH),float(SCREEN_HEIGHT)});
 
-	sf::Font font;
-	if (!font.loadFromFile("arial.ttf")) {
-		std::cerr << "Could not load font." << "\n";
-	}
+	
 
 	float zoom = 1.0f;
 	sf::Vector2i previousMousePos;
