@@ -137,7 +137,7 @@ int main() {
             using namespace std::chrono;
             std::cout << "Potential seed found: " << seed << ", with total error " << minTotalError << "\n";
             std::cout << (double)seed * 100.0 / (double)rng.max() << "% complete.\n";
-            time_point endTime = system_clock::now() + nanoseconds((uint64_t)(system_clock::now() - startTime).count() / (uint64_t)seed * (uint64_t)rng.max());
+            time_point endTime = startTime + nanoseconds((uint64_t)(system_clock::now() - startTime).count() / (uint64_t)seed * (uint64_t)rng.max());
             std::cout << "Projected end time: " << endTime << "\n\n";
         }
     }
