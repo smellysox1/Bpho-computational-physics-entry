@@ -3,7 +3,6 @@
 #include <imgui.h>
 #include <imgui-SFML.h>
 
-#define _USE_MATH_DEFINES
 #include <cmath>
 #include <chrono>
 #include <random>
@@ -15,9 +14,9 @@
 
 // PARAMETERS
 
-unsigned int n = 10;
+unsigned int n = 11;
 unsigned int step = 20;
-unsigned int seed = 0;
+unsigned int seed = std::chrono::steady_clock::now().time_since_epoch().count();
 
 unsigned int screenWidth = 1280;
 unsigned int screenHeight = 720;
