@@ -29,7 +29,7 @@ public:
 		m_vertices.resize(n);
 		m_vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
 
-		m_vertices[0] = sf::Vertex({(float)(screenWidth / 2), (float)(screenHeight / 2)}, sf::Color::White);
+		m_vertices[0] = {{(float)(screenWidth / 2), (float)(screenHeight / 2)}, sf::Color::White};
 
 		for (int i = 1; i < n; i++) {
 			sf::Color colour(255 * randomFloat(colourRng), 255 * randomFloat(colourRng), 255 * randomFloat(colourRng));
@@ -41,7 +41,7 @@ public:
 			float x = previous.position.x + step * std::sinf(angle);
 			float y = previous.position.y + step * std::cosf(angle);
 
-			m_vertices[i] = sf::Vertex({x, y}, colour);
+			m_vertices[i] = {{x, y}, colour};
 		}
 	}
 
@@ -141,9 +141,8 @@ int main() {
 
 		window.clear();
 
-		ImGui::SetNextWindowPos({0, 0});
-		ImGui::SetNextWindowSize({300.0f, (float)screenHeight});
-		ImGui::Begin("Radnom walk", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
+		ImGui::SetNextWindowSize({300.0f, 200.0f});
+		ImGui::Begin("Radnom walk", nullptr, ImGuiWindowFlags_NoResize);
 
 		ImGui::Text("N:");
 		ImGui::SameLine();
