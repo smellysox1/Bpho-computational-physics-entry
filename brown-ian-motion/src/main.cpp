@@ -12,13 +12,11 @@
 
 #include "constants.hpp"
 
-std::vector<particle> collidingObjects;
-
 // PARAMETERS
 
-
-unsigned int M = 5, m = 5, R = 5, r = 5;
+float M = 50.0f, m = 5.0f, R = 50.0f, r = 5.0f;
 float C = 1;
+unsigned int n = 50;
 unsigned int seed = std::chrono::steady_clock::now().time_since_epoch().count();
 
 unsigned int screenWidth = 1280;
@@ -34,9 +32,12 @@ float randomFloat(std::mt19937 rng) {
 	return rng() / X;
 }
 
-class particle : sf::CircleShape {
+class particle;
+
+std::vector<particle> collidingObjects;
+
+class particle : public sf::CircleShape {
 public:
-	float mass;
 	sf::Vector2f staleVel;
 	float speed;
 	sf::Vector2f velocity;
@@ -44,11 +45,14 @@ public:
 	virtual bool is_big() {
 		return false;
 	}
-	particle(float radius, float mass) {
-		setRadius(radius);
+	particle() {
+		float distance = randomFloat(rng) * 500.0f + R + 10.0f;
+		float angle = randomFloat(rng) * TAU;
+		setPosition({distance * std::sinf(angle), distance * std::cosf(angle)});
+
+		setRadius(r);
 		setFillColor(sf::Color::Green);
 		setPointCount(30);
-		this->mass = mass;
 		this->speed = 1;
 		velocity = { speed * std::sin(TAU * randomFloat(rng)),speed * std::cos(TAU * randomFloat(rng)) };//set initial velocity
 	}
@@ -61,7 +65,7 @@ public:
 	}
 	bool isCollision(particle other) {//chekcs for if the pos is within the circle
 		sf::Vector2f dist_from_rad = other.getPosition() - this->getPosition();
-		if (dist_from_rad.length() <= (this->getRadius()+other.getRadius())) {
+		if (dist_from_rad.length() <= (R+r)) {
 			return true;
 		}
 		return false;
@@ -77,19 +81,28 @@ public:
 	}
 };
 
-class bigParticle:particle {
+class bigParticle : public particle {
+public:
+	bigParticle() {
+		setPosition({0,0});
+		setRadius(R);
+		setFillColor(sf::Color::Red);
+		setPointCount(30);
+		this->speed = 0;
+		velocity = { 0.0f, 0.0f };//set initial velocity
+	}
 	virtual void update() {
 		update_pos();
 		staleVel = velocity;
 		bool velDone = 0;
 		for (particle other : collidingObjects) {
 			if (isCollision(other)) {
-				sf::Vector2f momentum = staleVel * mass;
-				sf::Vector2f other_momentum = other.staleVel * other.mass;
+				sf::Vector2f momentum = staleVel * M;
+				sf::Vector2f other_momentum = other.staleVel * m;
 				//define V for the ZMF
-				sf::Vector2f V = (momentum + other_momentum) / (mass + other.mass);
-				this->velocity = V * float(1.0 + coefficient_of_restitution) - coefficient_of_restitution * this->staleVel;
-				other.velocity = V * float(1.0 + coefficient_of_restitution) - coefficient_of_restitution * other.staleVel;
+				sf::Vector2f V = (momentum + other_momentum) / (M + m);
+				this->velocity = V * float(1.0 + C) - C * this->staleVel;
+				other.velocity = V * float(1.0 + C) - C * other.staleVel;
 				velDone = 1;
 				this->speed = this->velocity.x / std::sin(this->velocity.angle().asRadians());
 				other.speed=other.velocity.x/std::sin(other.velocity.angle().asRadians());
@@ -110,6 +123,10 @@ int main() {
 		std::cerr << "Could not initialise ImGui for SFML" << "\n";
 		return 1;
 	}
+
+	bigParticle big;
+
+	collidingObjects.resize(n);
 
 	sf::View camera(sf::FloatRect({0, 0}, {(float)screenWidth, (float)screenHeight}));
 
@@ -174,26 +191,30 @@ int main() {
 
 		ImGui::Text("Mass of large particle:");
 		ImGui::SameLine();
-		ImGui::SliderScalar("##M", ImGuiDataType_U32, &M, &M_MIN, &M_MAX);
+		ImGui::SliderFloat("##M", &M, 1.0f, 100.0f);
 
 		ImGui::Text("Radius of large particle:");
 		ImGui::SameLine();
-		ImGui::SliderScalar("##R", ImGuiDataType_U32, &R, &R_MIN, &R_MAX);
+		ImGui::SliderFloat("##R", &R, 1.0f, 100.0f);
 
 		ImGui::Text("Mass of small particles:");
 		ImGui::SameLine();
-		ImGui::SliderScalar("##m", ImGuiDataType_U32, &m, &m_MIN, &m_MAX);
+		ImGui::SliderFloat("##m", &m, 1.0f, 100.0f);
 
 		ImGui::Text("Radius of small particles:");
 		ImGui::SameLine();
-		ImGui::SliderScalar("##r", ImGuiDataType_U32, &r, &r_MIN, &r_MAX);
+		ImGui::SliderFloat("##r", &r, 1.0f, 100.0f);
 
 		ImGui::Text("Coefficient of Restitution:");
 		ImGui::SameLine();
-		ImGui::SliderFloat("##C", &C, C_MIN, C_MAX);
+		ImGui::SliderFloat("##C", &C, 0.0f, 1.0f);
 
 		if (running || ImGui::Button("Step")) {
-			// update particles
+			for (auto particle : collidingObjects) {
+				particle.update();
+			}
+
+			big.update();
 		}
 
 		if (ImGui::Button(running ? "Pause" : "Play")) {
@@ -204,7 +225,10 @@ int main() {
 
 		window.setView(camera);
 
-		// draw
+		window.draw(big);
+		for (auto particle : collidingObjects) {
+			window.draw(particle);
+		}
 
 		ImGui::SFML::Render(window);
 

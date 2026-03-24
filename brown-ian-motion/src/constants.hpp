@@ -1,5 +1,7 @@
 #pragma once
 
+#define TAU 6.283185307179586
+
 unsigned int M_MIN = 1;
 unsigned int M_MAX = 100;
 
