@@ -9,3 +9,6 @@
 [submodule "randomWalk/vendor/imgui"]
 	path = randomWalk/vendor/imgui
 	url = https://github.com/ocornut/imgui
+[submodule "randomWalk/vendor/json"]
+	path = randomWalk/vendor/json
+	url = https://github.com/nlohmann/json

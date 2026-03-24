@@ -10,6 +10,8 @@
 #include <vector>
 #include <filesystem>
 
+#include "presets.hpp"
+
 #define TAU 6.283185307179586
 
 // PARAMETERS
@@ -141,7 +143,7 @@ int main() {
 
 		window.clear();
 
-		ImGui::SetNextWindowSize({300.0f, 200.0f});
+		ImGui::SetNextWindowSize({0.0f, 0.0f});
 		ImGui::Begin("Radnom walk", nullptr, ImGuiWindowFlags_NoResize);
 
 		ImGui::Text("N:");
@@ -159,6 +161,24 @@ int main() {
 		if (ImGui::Button("Redraw")) {
 			path.resetRng(seed);
 			path.newPath();
+		}
+
+		ImGui::End();
+
+		ImGui::SetNextWindowSize({0.0f, 0.0f});
+		ImGui::Begin("Presets", nullptr, ImGuiWindowFlags_NoResize);
+
+		static std::vector<Preset> presets = getPresets();
+
+		for (const Preset& preset : presets) {
+			if (ImGui::Button(preset.displayName.c_str())) {
+				seed = preset.seed;
+				n = preset.n;
+				step = preset.step;
+
+				path.resetRng(seed);
+				path.newPath();
+			}
 		}
 
 		ImGui::End();
