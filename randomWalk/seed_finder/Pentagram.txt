@@ -1,0 +1,1343 @@
+Start time: 17:59:52
+
+Potential seed found: 3223533216, with total error 98310144
+Approximately 0.644777% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:31.345165463
+
+Potential seed found: 1076307273, with total error 101764651
+Approximately 0.716778% complete.
+Projected end time (rough estimate): 2026-03-23 21:07:09.665976677
+
+Potential seed found: 1435555419, with total error 122972646
+Approximately 1.08955% complete.
+Projected end time (rough estimate): 2026-03-23 21:07:08.592234854
+
+Potential seed found: 2509196874, with total error 112568042
+Approximately 1.06151% complete.
+Projected end time (rough estimate): 2026-03-23 21:55:00.851611379
+
+Potential seed found: 7966441, with total error 111532139
+Approximately 2.2258% complete.
+Projected end time (rough estimate): 2026-03-23 21:01:06.025412621
+
+Potential seed found: 2870895638, with total error 116020281
+Approximately 2.11898% complete.
+Projected end time (rough estimate): 2026-03-23 21:35:38.347131011
+
+Potential seed found: 9878946, with total error 113436057
+Approximately 2.76015% complete.
+Projected end time (rough estimate): 2026-03-23 21:00:07.327526297
+
+Potential seed found: 3589561482, with total error 131930183
+Approximately 2.91189% complete.
+Projected end time (rough estimate): 2026-03-23 21:01:23.921109671
+
+Potential seed found: 2514205535, with total error 118047947
+Approximately 2.46091% complete.
+Projected end time (rough estimate): 2026-03-23 21:41:24.807825899
+
+Potential seed found: 11026723, with total error 120751374
+Approximately 3.08083% complete.
+Projected end time (rough estimate): 2026-03-23 20:59:51.221398952
+
+Potential seed found: 13508199, with total error 78425538
+Approximately 3.77415% complete.
+Projected end time (rough estimate): 2026-03-23 20:58:55.386824156
+
+Potential seed found: 1800807133, with total error 125505753
+Approximately 3.1397% complete.
+Projected end time (rough estimate): 2026-03-23 21:40:37.921099628
+
+Potential seed found: 2158904355, with total error 112699390
+Approximately 3.19091% complete.
+Projected end time (rough estimate): 2026-03-23 21:38:30.145822691
+
+Potential seed found: 14607005, with total error 100699930
+Approximately 4.08115% complete.
+Projected end time (rough estimate): 2026-03-23 20:59:54.084710480
+
+Potential seed found: 732112673, with total error 123367826
+Approximately 4.54992% complete.
+Projected end time (rough estimate): 2026-03-23 21:00:17.707030586
+
+Potential seed found: 1803412118, with total error 102025631
+Approximately 3.86753% complete.
+Projected end time (rough estimate): 2026-03-23 21:45:04.209071732
+
+Potential seed found: 733894893, with total error 129741778
+Approximately 5.04786% complete.
+Projected end time (rough estimate): 2026-03-23 21:00:40.613522810
+
+Potential seed found: 375878151, with total error 83466070
+Approximately 5.01914% complete.
+Projected end time (rough estimate): 2026-03-23 21:03:17.021915027
+
+Potential seed found: 376384559, with total error 24665614
+Approximately 5.16063% complete.
+Projected end time (rough estimate): 2026-03-23 21:02:41.230520927
+
+Potential seed found: 18992853, with total error 120213209
+Approximately 5.30654% complete.
+Projected end time (rough estimate): 2026-03-23 20:59:54.442624421
+
+Potential seed found: 3956362916, with total error 118684997
+Approximately 5.39503% complete.
+Projected end time (rough estimate): 2026-03-23 21:00:48.129715571
+
+Potential seed found: 377516538, with total error 111089981
+Approximately 5.4769% complete.
+Projected end time (rough estimate): 2026-03-23 21:01:57.922934066
+
+Potential seed found: 2163566747, with total error 99758603
+Approximately 4.49357% complete.
+Projected end time (rough estimate): 2026-03-23 21:42:29.948163161
+
+Potential seed found: 737055573, with total error 97916461
+Approximately 5.93095% complete.
+Projected end time (rough estimate): 2026-03-23 20:59:34.757357666
+
+Potential seed found: 2165215767, with total error 126683238
+Approximately 4.9543% complete.
+Projected end time (rough estimate): 2026-03-23 21:38:32.293306337
+
+Potential seed found: 1456048628, with total error 116511810
+Approximately 6.81529% complete.
+Projected end time (rough estimate): 2026-03-23 20:56:48.685289042
+
+Potential seed found: 2167671055, with total error 105463784
+Approximately 5.6403% complete.
+Projected end time (rough estimate): 2026-03-23 21:36:34.897533689
+
+Potential seed found: 2529313809, with total error 78226687
+Approximately 6.68212% complete.
+Projected end time (rough estimate): 2026-03-23 21:36:18.791406344
+
+Potential seed found: 3966458736, with total error 117999275
+Approximately 8.21577% complete.
+Projected end time (rough estimate): 2026-03-23 20:56:02.872304594
+
+Potential seed found: 2529410072, with total error 132830896
+Approximately 6.70901% complete.
+Projected end time (rough estimate): 2026-03-23 21:36:19.507234226
+
+Potential seed found: 2530607872, with total error 84096216
+Approximately 7.04367% complete.
+Projected end time (rough estimate): 2026-03-23 21:34:53.607888386
+
+Potential seed found: 3970443088, with total error 124735414
+Approximately 9.32898% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:55.097027657
+
+Potential seed found: 3613945243, with total error 111947304
+Approximately 9.72464% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:10.715698973
+
+Potential seed found: 394183904, with total error 131111178
+Approximately 10.1337% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:42.310955546
+
+Potential seed found: 3257476890, with total error 105030313
+Approximately 10.1285% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:53.406287717
+
+Potential seed found: 1469859594, with total error 128603579
+Approximately 10.674% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:19.762377263
+
+Potential seed found: 2179370924, with total error 91134202
+Approximately 8.9092% complete.
+Projected end time (rough estimate): 2026-03-23 21:28:13.818016289
+
+Potential seed found: 1470809636, with total error 110750267
+Approximately 10.9395% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:03.298335977
+
+Potential seed found: 3620451931, with total error 105331286
+Approximately 11.5426% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:42.927953663
+
+Potential seed found: 3263229685, with total error 122012940
+Approximately 11.7358% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:30.271423640
+
+Potential seed found: 2181734037, with total error 123636084
+Approximately 9.56945% complete.
+Projected end time (rough estimate): 2026-03-23 21:36:05.906504468
+
+Potential seed found: 1477275386, with total error 80030069
+Approximately 12.746% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:12.992724707
+
+Potential seed found: 2899723685, with total error 114458575
+Approximately 10.1734% complete.
+Projected end time (rough estimate): 2026-03-23 21:42:17.421175226
+
+Potential seed found: 1120654162, with total error 113820613
+Approximately 13.1072% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:04.402790123
+
+Potential seed found: 47135236, with total error 121723467
+Approximately 13.1694% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:02.613220418
+
+Potential seed found: 764556651, with total error 132364733
+Approximately 13.6147% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:50.802060365
+
+Potential seed found: 1122858227, with total error 107796284
+Approximately 13.723% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:11.203155002
+
+Potential seed found: 1126828406, with total error 103281999
+Approximately 14.8322% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:56.170769480
+
+Potential seed found: 1485207694, with total error 96538835
+Approximately 14.9622% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:11.561068943
+
+Potential seed found: 413497486, with total error 84419653
+Approximately 15.5299% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:23.372228996
+
+Potential seed found: 414167473, with total error 110112696
+Approximately 15.7171% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:21.940573232
+
+Potential seed found: 1131759627, with total error 94806109
+Approximately 16.21% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:51.875802188
+
+Potential seed found: 1133291662, with total error 124801619
+Approximately 16.638% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:51.875802188
+
+Potential seed found: 2547496551, with total error 121113428
+Approximately 11.7623% complete.
+Projected end time (rough estimate): 2026-03-23 22:12:28.823630627
+
+Potential seed found: 3998319329, with total error 112104946
+Approximately 17.1175% complete.
+Projected end time (rough estimate): 2026-03-23 20:55:19.564717733
+
+Potential seed found: 3283795079, with total error 91326927
+Approximately 17.4817% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:20.508917468
+
+Potential seed found: 1494649269, with total error 95642012
+Approximately 17.6002% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:08.697757415
+
+Potential seed found: 4000717906, with total error 78649253
+Approximately 17.7877% complete.
+Projected end time (rough estimate): 2026-03-23 20:55:09.185213444
+
+Potential seed found: 423056824, with total error 114259286
+Approximately 18.2007% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:11.203155002
+
+Potential seed found: 4002275008, with total error 98301748
+Approximately 18.2227% complete.
+Projected end time (rough estimate): 2026-03-23 20:55:07.037729798
+
+Potential seed found: 3288591198, with total error 130568095
+Approximately 18.8218% complete.
+Projected end time (rough estimate): 2026-03-23 20:54:07.981929533
+
+Potential seed found: 427719749, with total error 120097407
+Approximately 19.5035% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:52.591630070
+
+Potential seed found: 1502752797, with total error 112343575
+Approximately 19.8643% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:14.294838383
+
+Potential seed found: 1144985622, with total error 110315366
+Approximately 19.9053% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:21.095203262
+
+Potential seed found: 3650383770, with total error 131680443
+Approximately 19.9054% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:59.391994949
+
+Potential seed found: 72135691, with total error 69157246
+Approximately 20.1545% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:08.210301386
+
+Potential seed found: 77908687, with total error 128079425
+Approximately 21.7674% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:08.796587180
+
+Potential seed found: 1509880605, with total error 112674218
+Approximately 21.8558% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:48.037578602
+
+Potential seed found: 797708670, with total error 116987248
+Approximately 22.8772% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:42.539327399
+
+Potential seed found: 2921119311, with total error 131265815
+Approximately 16.1513% complete.
+Projected end time (rough estimate): 2026-03-23 22:05:28.274749952
+
+Potential seed found: 442410394, with total error 116373446
+Approximately 23.608% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:19.632835175
+
+Potential seed found: 2205975226, with total error 121559804
+Approximately 16.3424% complete.
+Projected end time (rough estimate): 2026-03-23 22:06:14.445648341
+
+Potential seed found: 800637319, with total error 122311569
+Approximately 23.6955% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:01.021310243
+
+Potential seed found: 3663569484, with total error 106797911
+Approximately 23.5895% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:45.890094956
+
+Potential seed found: 1848383108, with total error 101619136
+Approximately 16.4323% complete.
+Projected end time (rough estimate): 2026-03-23 22:06:54.889923674
+
+Potential seed found: 3306449065, with total error 117997088
+Approximately 23.8112% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:27.149027936
+
+Potential seed found: 2924156787, with total error 111344086
+Approximately 17% complete.
+Projected end time (rough estimate): 2026-03-23 22:02:16.432877576
+
+Potential seed found: 2207967848, with total error 89989972
+Approximately 16.8991% complete.
+Projected end time (rough estimate): 2026-03-23 22:04:07.028285345
+
+Potential seed found: 3308038666, with total error 82450752
+Approximately 24.2553% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:08.179589063
+
+Potential seed found: 4024210961, with total error 110067106
+Approximately 24.3516% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:42.539327399
+
+Potential seed found: 1850706797, with total error 116626140
+Approximately 17.0815% complete.
+Projected end time (rough estimate): 2026-03-23 22:04:40.672195799
+
+Potential seed found: 804995867, with total error 107599466
+Approximately 24.9132% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:05.902563329
+
+Potential seed found: 3314872628, with total error 70836189
+Approximately 26.1647% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:45.143554751
+
+Potential seed found: 1857526794, with total error 110665231
+Approximately 18.987% complete.
+Projected end time (rough estimate): 2026-03-23 21:58:28.441697159
+
+Potential seed found: 1530782462, with total error 115490553
+Approximately 27.6957% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:54.807231158
+
+Potential seed found: 1174023522, with total error 104311903
+Approximately 28.0184% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:43.125613193
+
+Potential seed found: 3680052778, with total error 133756962
+Approximately 28.1949% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:23.113144820
+
+Potential seed found: 2220962541, with total error 123603034
+Approximately 20.5298% complete.
+Projected end time (rough estimate): 2026-03-23 22:03:15.130763900
+
+Potential seed found: 2221367748, with total error 78613909
+Approximately 20.643% complete.
+Projected end time (rough estimate): 2026-03-23 22:02:58.666722614
+
+Potential seed found: 1863495486, with total error 101124844
+Approximately 20.6546% complete.
+Projected end time (rough estimate): 2026-03-23 22:03:26.226096071
+
+Potential seed found: 2580068704, with total error 124781693
+Approximately 20.8629% complete.
+Projected end time (rough estimate): 2026-03-23 22:03:27.299837894
+
+Potential seed found: 2581611604, with total error 95089486
+Approximately 21.294% complete.
+Projected end time (rough estimate): 2026-03-23 22:02:32.896918862
+
+Potential seed found: 2583924373, with total error 119589450
+Approximately 21.9401% complete.
+Projected end time (rough estimate): 2026-03-23 22:00:42.301511093
+
+Potential seed found: 826194211, with total error 113812945
+Approximately 30.836% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:27.636483965
+
+Potential seed found: 4048532426, with total error 129243700
+Approximately 31.1469% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:34.924304873
+
+Potential seed found: 2585988398, with total error 114711851
+Approximately 22.5168% complete.
+Projected end time (rough estimate): 2026-03-23 21:59:16.044251312
+
+Potential seed found: 2228989296, with total error 132435084
+Approximately 22.7724% complete.
+Projected end time (rough estimate): 2026-03-23 21:57:04.331921024
+
+Potential seed found: 2230305868, with total error 91073306
+Approximately 23.1403% complete.
+Projected end time (rough estimate): 2026-03-23 21:56:01.339067408
+
+Potential seed found: 3693398974, with total error 133481493
+Approximately 31.9238% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:16.670693882
+
+Potential seed found: 472555502, with total error 132561245
+Approximately 32.0305% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:54.837943481
+
+Potential seed found: 1189313293, with total error 121963671
+Approximately 32.2903% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:27.408112112
+
+Potential seed found: 1548154144, with total error 99134000
+Approximately 32.5493% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:34.078934903
+
+Potential seed found: 2590466639, with total error 112362239
+Approximately 23.768% complete.
+Projected end time (rough estimate): 2026-03-23 21:55:35.211349715
+
+Potential seed found: 833665135, with total error 112197879
+Approximately 32.9233% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:27.864855818
+
+Potential seed found: 476848326, with total error 42869968
+Approximately 33.2299% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:20.836119086
+
+Potential seed found: 2592823102, with total error 106994738
+Approximately 24.4264% complete.
+Projected end time (rough estimate): 2026-03-23 21:53:44.615941946
+
+Potential seed found: 1551087619, with total error 76730030
+Approximately 33.3689% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:07.951217210
+
+Potential seed found: 4056332942, with total error 91463764
+Approximately 33.3263% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:43.742611310
+
+Potential seed found: 1194216040, with total error 112244226
+Approximately 33.6601% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:56.985427127
+
+Potential seed found: 3344010937, with total error 102534468
+Approximately 34.3059% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:29.296511582
+
+Potential seed found: 1880028896, with total error 122117330
+Approximately 25.274% complete.
+Projected end time (rough estimate): 2026-03-23 21:52:25.159047044
+
+Potential seed found: 4060488538, with total error 121748031
+Approximately 34.4874% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:30.499795493
+
+Potential seed found: 483421563, with total error 121768036
+Approximately 35.0664% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:46.476380750
+
+Potential seed found: 3347829281, with total error 116146999
+Approximately 35.3727% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:18.559093352
+
+Potential seed found: 2598592029, with total error 93746987
+Approximately 26.0382% complete.
+Projected end time (rough estimate): 2026-03-23 21:51:45.430599593
+
+Potential seed found: 2241926605, with total error 124376258
+Approximately 26.3871% complete.
+Projected end time (rough estimate): 2026-03-23 21:49:06.874723730
+
+Potential seed found: 127461635, with total error 102542272
+Approximately 35.6124% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:24.643630349
+
+Potential seed found: 1201737264, with total error 96197439
+Approximately 35.7615% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:09.740786915
+
+Potential seed found: 3708002312, with total error 121092933
+Approximately 36.0039% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:43.613069222
+
+Potential seed found: 1884929277, with total error 94856162
+Approximately 26.6432% complete.
+Projected end time (rough estimate): 2026-03-23 21:50:53.533078148
+
+Potential seed found: 2244729442, with total error 121769006
+Approximately 27.1702% complete.
+Projected end time (rough estimate): 2026-03-23 21:48:03.881870114
+
+Potential seed found: 848825550, with total error 109555780
+Approximately 37.1591% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:29.166969494
+
+Potential seed found: 2604526307, with total error 130734054
+Approximately 27.6962% complete.
+Projected end time (rough estimate): 2026-03-23 21:50:02.351384585
+
+Potential seed found: 1889569054, with total error 115691955
+Approximately 27.9395% complete.
+Projected end time (rough estimate): 2026-03-23 21:49:05.800981907
+
+Potential seed found: 2605971144, with total error 132733574
+Approximately 28.0999% complete.
+Projected end time (rough estimate): 2026-03-23 21:49:29.065388072
+
+Potential seed found: 4072632871, with total error 126918059
+Approximately 37.8805% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:26.433200054
+
+Potential seed found: 852669940, with total error 128335525
+Approximately 38.2332% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:04.112993624
+
+Potential seed found: 852695138, with total error 78304025
+Approximately 38.2403% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:04.112993624
+
+Potential seed found: 1891569875, with total error 97710047
+Approximately 28.4985% complete.
+Projected end time (rough estimate): 2026-03-23 21:48:23.567136869
+
+Potential seed found: 1569290789, with total error 110868924
+Approximately 38.4548% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:18.071637323
+
+Potential seed found: 4074389086, with total error 43228855
+Approximately 38.3712% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:17.843265470
+
+Potential seed found: 2607862690, with total error 130442853
+Approximately 28.6284% complete.
+Projected end time (rough estimate): 2026-03-23 21:49:07.232637671
+
+Potential seed found: 2251596488, with total error 131895809
+Approximately 29.0888% complete.
+Projected end time (rough estimate): 2026-03-23 21:45:55.748679236
+
+Potential seed found: 496863224, with total error 103555097
+Approximately 38.822% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:53.147203541
+
+Potential seed found: 1895335835, with total error 93964649
+Approximately 29.5507% complete.
+Projected end time (rough estimate): 2026-03-23 21:48:11.755976816
+
+Potential seed found: 1574359499, with total error 133839826
+Approximately 39.871% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:36.325248314
+
+Potential seed found: 859692733, with total error 98413237
+Approximately 40.1954% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:14.492497913
+
+Potential seed found: 144476776, with total error 127994911
+Approximately 40.3663% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:39.904387724
+
+Potential seed found: 1218971032, with total error 97451233
+Approximately 40.5766% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:20.348663057
+
+Potential seed found: 862367516, with total error 76389932
+Approximately 40.9427% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:16.639981559
+
+Potential seed found: 862764648, with total error 109576770
+Approximately 41.0537% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:18.071637323
+
+Potential seed found: 3726592133, with total error 134085260
+Approximately 41.1978% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:02.810879948
+
+Potential seed found: 3730341785, with total error 116305071
+Approximately 42.2455% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:50.641805954
+
+Potential seed found: 1225461515, with total error 125200048
+Approximately 42.39% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:03.884621771
+
+Potential seed found: 2621678175, with total error 130781398
+Approximately 32.4884% complete.
+Projected end time (rough estimate): 2026-03-23 21:44:30.923075219
+
+Potential seed found: 873360812, with total error 115299597
+Approximately 44.0142% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:31.542824993
+
+Potential seed found: 1231238154, with total error 119638985
+Approximately 44.004% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:48.852236249
+
+Potential seed found: 1591435881, with total error 128672737
+Approximately 44.642% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:39.416931695
+
+Potential seed found: 876687583, with total error 133445607
+Approximately 44.9437% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:06.846763064
+
+Potential seed found: 3384247664, with total error 118910782
+Approximately 45.5479% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:03.983451536
+
+Potential seed found: 880078643, with total error 95795962
+Approximately 45.8911% complete.
+Projected end time (rough estimate): 2026-03-23 20:47:47.877324191
+
+Potential seed found: 4100924600, with total error 133454052
+Approximately 45.7851% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:16.282067618
+
+Potential seed found: 1240094573, with total error 129151980
+Approximately 46.4784% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:05.544649388
+
+Potential seed found: 3747085959, with total error 73940677
+Approximately 46.9237% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:11.499644297
+
+Potential seed found: 2635023037, with total error 119408682
+Approximately 36.2169% complete.
+Projected end time (rough estimate): 2026-03-23 21:40:06.782586761
+
+Potential seed found: 4107628892, with total error 92035308
+Approximately 47.6583% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:34.406136521
+
+Potential seed found: 888586777, with total error 130213443
+Approximately 48.2683% complete.
+Projected end time (rough estimate): 2026-03-23 20:46:46.674040280
+
+Potential seed found: 530084630, with total error 93536857
+Approximately 48.1039% complete.
+Projected end time (rough estimate): 2026-03-23 20:47:57.898914539
+
+Potential seed found: 1923798858, with total error 96383227
+Approximately 37.5032% complete.
+Projected end time (rough estimate): 2026-03-23 21:37:38.606215187
+
+Potential seed found: 892172059, with total error 113963212
+Approximately 49.27% complete.
+Projected end time (rough estimate): 2026-03-23 20:46:48.463609985
+
+Potential seed found: 3756126410, with total error 103266281
+Approximately 49.4496% complete.
+Projected end time (rough estimate): 2026-03-23 20:47:22.107520439
+
+Potential seed found: 3756302369, with total error 133940406
+Approximately 49.4988% complete.
+Projected end time (rough estimate): 2026-03-23 20:47:20.675864675
+
+Potential seed found: 2284982716, with total error 129473522
+Approximately 38.4168% complete.
+Projected end time (rough estimate): 2026-03-23 21:36:13.064783288
+
+Potential seed found: 3002191625, with total error 91648144
+Approximately 38.8027% complete.
+Projected end time (rough estimate): 2026-03-23 21:34:07.079076056
+
+Potential seed found: 1251022674, with total error 102591177
+Approximately 49.5317% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:15.436697648
+
+Potential seed found: 178560400, with total error 111963709
+Approximately 49.8892% complete.
+Projected end time (rough estimate): 2026-03-23 20:47:56.825172716
+
+Potential seed found: 896610648, with total error 122091218
+Approximately 50.5101% complete.
+Projected end time (rough estimate): 2026-03-23 20:46:25.557117761
+
+Potential seed found: 1929288289, with total error 116663420
+Approximately 39.0369% complete.
+Projected end time (rough estimate): 2026-03-23 21:35:43.357926185
+
+Potential seed found: 3004661712, with total error 79603496
+Approximately 39.4928% complete.
+Projected end time (rough estimate): 2026-03-23 21:33:22.339833431
+
+Potential seed found: 1253477378, with total error 59825576
+Approximately 50.2175% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:07.562590946
+
+Potential seed found: 4117332287, with total error 122009093
+Approximately 50.3694% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:15.078783707
+
+Potential seed found: 3404226411, with total error 118030841
+Approximately 51.1299% complete.
+Projected end time (rough estimate): 2026-03-23 20:46:12.314301944
+
+Potential seed found: 3763510211, with total error 104523157
+Approximately 51.5126% complete.
+Projected end time (rough estimate): 2026-03-23 20:46:37.368277814
+
+Potential seed found: 1617471855, with total error 112353495
+Approximately 51.9164% complete.
+Projected end time (rough estimate): 2026-03-23 20:46:05.871851006
+
+Potential seed found: 4121663866, with total error 124209904
+Approximately 51.5796% complete.
+Projected end time (rough estimate): 2026-03-23 20:48:11.141730356
+
+Potential seed found: 2650595534, with total error 67307396
+Approximately 40.5678% complete.
+Projected end time (rough estimate): 2026-03-23 21:34:54.681630209
+
+Potential seed found: 903864502, with total error 96519533
+Approximately 52.5368% complete.
+Projected end time (rough estimate): 2026-03-23 20:46:48.463609985
+
+Potential seed found: 1621091937, with total error 88830896
+Approximately 52.9279% complete.
+Projected end time (rough estimate): 2026-03-23 20:46:31.641654758
+
+Potential seed found: 1937318584, with total error 129562411
+Approximately 41.2806% complete.
+Projected end time (rough estimate): 2026-03-23 21:34:03.857850587
+
+Potential seed found: 2652261697, with total error 126145344
+Approximately 41.0334% complete.
+Projected end time (rough estimate): 2026-03-23 21:35:23.314745489
+
+Potential seed found: 1938132874, with total error 131822041
+Approximately 41.5081% complete.
+Projected end time (rough estimate): 2026-03-23 21:33:47.751723242
+
+Potential seed found: 3014777197, with total error 131269767
+Approximately 42.319% complete.
+Projected end time (rough estimate): 2026-03-23 21:31:30.312769898
+
+Potential seed found: 3015844842, with total error 125368790
+Approximately 42.6173% complete.
+Projected end time (rough estimate): 2026-03-23 21:30:56.668859444
+
+Potential seed found: 3770948770, with total error 79859368
+Approximately 53.5909% complete.
+Projected end time (rough estimate): 2026-03-23 20:49:33.819850727
+
+Potential seed found: 2301979021, with total error 115062121
+Approximately 43.1655% complete.
+Projected end time (rough estimate): 2026-03-23 21:30:43.426043627
+
+Potential seed found: 2659667365, with total error 62495519
+Approximately 43.1025% complete.
+Projected end time (rough estimate): 2026-03-23 21:31:34.607737190
+
+Potential seed found: 2304382713, with total error 106378882
+Approximately 43.8371% complete.
+Projected end time (rough estimate): 2026-03-23 21:29:30.053685722
+
+Potential seed found: 4127506911, with total error 99050537
+Approximately 53.2121% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:10.715698973
+
+Potential seed found: 4129810495, with total error 128527373
+Approximately 53.8557% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:25.748084495
+
+Potential seed found: 195379337, with total error 129757648
+Approximately 54.5884% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:32.776821227
+
+Potential seed found: 2312135909, with total error 126529163
+Approximately 46.0033% complete.
+Projected end time (rough estimate): 2026-03-23 21:27:39.816191894
+
+Potential seed found: 4134259177, with total error 128271405
+Approximately 55.0987% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:32.190535433
+
+Potential seed found: 557627555, with total error 120522095
+Approximately 55.7993% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:37.658074313
+
+Potential seed found: 3779747324, with total error 119097051
+Approximately 56.0492% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:28.352311847
+
+Potential seed found: 201175261, with total error 61957630
+Approximately 56.2077% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:38.145530342
+
+Potential seed found: 4138165984, with total error 121548621
+Approximately 56.1902% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:28.253482082
+
+Potential seed found: 561540599, with total error 130278649
+Approximately 56.8926% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:41.595127664
+
+Potential seed found: 3033090822, with total error 75993607
+Approximately 47.4358% complete.
+Projected end time (rough estimate): 2026-03-23 21:26:09.979792703
+
+Potential seed found: 1276964142, with total error 122782199
+Approximately 56.7797% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:21.453117203
+
+Potential seed found: 3784569821, with total error 118069209
+Approximately 57.3966% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:30.499795493
+
+Potential seed found: 3785051118, with total error 125155906
+Approximately 57.5311% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:30.499795493
+
+Potential seed found: 564212199, with total error 126366854
+Approximately 57.6391% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:41.953041605
+
+Potential seed found: 2677450116, with total error 127975833
+Approximately 48.0709% complete.
+Projected end time (rough estimate): 2026-03-23 21:26:35.033768573
+
+Potential seed found: 3038544224, with total error 100330390
+Approximately 48.9594% complete.
+Projected end time (rough estimate): 2026-03-23 21:25:01.618229972
+
+Potential seed found: 3432062561, with total error 103806446
+Approximately 58.9072% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:57.213798980
+
+Potential seed found: 1642490223, with total error 119189787
+Approximately 58.9065% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:38.731816136
+
+Potential seed found: 926271041, with total error 129996831
+Approximately 58.7971% complete.
+Projected end time (rough estimate): 2026-03-23 20:52:11.659898708
+
+Potential seed found: 1283846551, with total error 127162311
+Approximately 58.7026% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:20.737289321
+
+Potential seed found: 3436272810, with total error 110841028
+Approximately 60.0835% complete.
+Projected end time (rough estimate): 2026-03-23 20:50:51.845089865
+
+Potential seed found: 3794317378, with total error 119672948
+Approximately 60.12% complete.
+Projected end time (rough estimate): 2026-03-23 20:51:30.857709434
+
+Potential seed found: 3045447751, with total error 86384192
+Approximately 50.8883% complete.
+Projected end time (rough estimate): 2026-03-23 21:23:40.729679306
+
+Potential seed found: 1971801599, with total error 126507188
+Approximately 50.915% complete.
+Projected end time (rough estimate): 2026-03-23 21:23:42.519249011
+
+Potential seed found: 1973688199, with total error 100868970
+Approximately 51.4421% complete.
+Projected end time (rough estimate): 2026-03-23 21:23:21.760240433
+
+Potential seed found: 4153123039, with total error 59466854
+Approximately 60.3692% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:21.811031144
+
+Potential seed found: 3048940268, with total error 110357875
+Approximately 51.8641% complete.
+Projected end time (rough estimate): 2026-03-23 21:23:02.790801560
+
+Potential seed found: 1292266775, with total error 132130890
+Approximately 61.0552% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:09.999871091
+
+Potential seed found: 2692066297, with total error 115320535
+Approximately 52.1546% complete.
+Projected end time (rough estimate): 2026-03-23 21:23:43.950904775
+
+Potential seed found: 3052425099, with total error 126808935
+Approximately 52.8377% complete.
+Projected end time (rough estimate): 2026-03-23 21:22:26.283579578
+
+Potential seed found: 1979421834, with total error 129882909
+Approximately 53.0441% complete.
+Projected end time (rough estimate): 2026-03-23 21:22:13.040763761
+
+Potential seed found: 3053996852, with total error 123883700
+Approximately 53.2769% complete.
+Projected end time (rough estimate): 2026-03-23 21:22:01.587517649
+
+Potential seed found: 3802712250, with total error 123337469
+Approximately 62.4655% complete.
+Projected end time (rough estimate): 2026-03-23 20:53:23.600600849
+
+Potential seed found: 2696971301, with total error 100735501
+Approximately 53.5251% complete.
+Projected end time (rough estimate): 2026-03-23 21:22:29.146891106
+
+Potential seed found: 1985710882, with total error 93770147
+Approximately 54.8012% complete.
+Projected end time (rough estimate): 2026-03-23 21:20:12.423765644
+
+Potential seed found: 2344179156, with total error 122139700
+Approximately 54.9561% complete.
+Projected end time (rough estimate): 2026-03-23 21:20:17.076646877
+
+Potential seed found: 1298664886, with total error 109093528
+Approximately 62.8428% complete.
+Projected end time (rough estimate): 2026-03-23 20:57:16.602576440
+
+Potential seed found: 3064965378, with total error 133435275
+Approximately 56.3414% complete.
+Projected end time (rough estimate): 2026-03-23 21:18:46.882333745
+
+Potential seed found: 1993369580, with total error 113313284
+Approximately 56.941% complete.
+Projected end time (rough estimate): 2026-03-23 21:19:00.483063503
+
+Potential seed found: 3807830579, with total error 78989037
+Approximately 63.8956% complete.
+Projected end time (rough estimate): 2026-03-23 20:57:40.582810487
+
+Potential seed found: 3068917092, with total error 124071818
+Approximately 57.4455% complete.
+Projected end time (rough estimate): 2026-03-23 21:20:09.918368057
+
+Potential seed found: 228947930, with total error 127230777
+Approximately 63.9673% complete.
+Projected end time (rough estimate): 2026-03-23 20:59:57.663849890
+
+Potential seed found: 2714111931, with total error 99421546
+Approximately 58.3141% complete.
+Projected end time (rough estimate): 2026-03-23 21:21:42.975992717
+
+Potential seed found: 3074138662, with total error 99147999
+Approximately 58.9044% complete.
+Projected end time (rough estimate): 2026-03-23 21:20:37.477741514
+
+Potential seed found: 2715042813, with total error 109224199
+Approximately 58.5742% complete.
+Projected end time (rough estimate): 2026-03-23 21:21:46.913046068
+
+Potential seed found: 2716383436, with total error 125954480
+Approximately 58.9488% complete.
+Projected end time (rough estimate): 2026-03-23 21:21:30.806918723
+
+Potential seed found: 2359807496, with total error 113000572
+Approximately 59.3226% complete.
+Projected end time (rough estimate): 2026-03-23 21:20:31.035290576
+
+Potential seed found: 1668221719, with total error 117143580
+Approximately 66.0958% complete.
+Projected end time (rough estimate): 2026-03-23 21:00:08.043354179
+
+Potential seed found: 2719105070, with total error 127745927
+Approximately 59.7092% complete.
+Projected end time (rough estimate): 2026-03-23 21:20:46.067676098
+
+Potential seed found: 2719382458, with total error 81876765
+Approximately 59.7867% complete.
+Projected end time (rough estimate): 2026-03-23 21:20:43.920192452
+
+Potential seed found: 3815954185, with total error 126510565
+Approximately 66.1653% complete.
+Projected end time (rough estimate): 2026-03-23 21:02:17.608200821
+
+Potential seed found: 2364832856, with total error 120789433
+Approximately 60.7267% complete.
+Projected end time (rough estimate): 2026-03-23 21:19:09.788825969
+
+Potential seed found: 2007499962, with total error 70460593
+Approximately 60.889% complete.
+Projected end time (rough estimate): 2026-03-23 21:18:46.882333745
+
+Potential seed found: 3081644459, with total error 123605261
+Approximately 61.0015% complete.
+Projected end time (rough estimate): 2026-03-23 21:18:42.945280394
+
+Potential seed found: 1310174004, with total error 40893104
+Approximately 66.0584% complete.
+Projected end time (rough estimate): 2026-03-23 21:04:26.099305640
+
+Potential seed found: 2368108953, with total error 119505123
+Approximately 61.642% complete.
+Projected end time (rough estimate): 2026-03-23 21:18:46.524419804
+
+Potential seed found: 1670895712, with total error 129785162
+Approximately 66.8429% complete.
+Projected end time (rough estimate): 2026-03-23 21:03:57.824104301
+
+Potential seed found: 2729074179, with total error 70537033
+Approximately 62.4945% complete.
+Projected end time (rough estimate): 2026-03-23 21:18:23.975841521
+
+Potential seed found: 2378528773, with total error 111048157
+Approximately Potential seed found: 309501182764.5533% complete.
+Projected end time (rough estimate): , with total error 130120177
+Approximately 2026-03-23 21:16:08.32645788264.7363
+
+% complete.
+Projected end time (rough estimate): 2026-03-23 21:15:35.398375310
+
+Potential seed found: 239855425, with total error 124273110
+Approximately 67.0148% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:24.599532434
+
+Potential seed found: 2382042321, with total error 129306529
+Approximately 65.5349% complete.
+Projected end time (rough estimate): 2026-03-23 21:15:18.934334024
+
+Potential seed found: 2741947117, with total error 118350196
+Approximately 66.0912% complete.
+Projected end time (rough estimate): 2026-03-23 21:15:08.196915794
+
+Potential seed found: 2028835592, with total error 132942289
+Approximately 66.8501% complete.
+Projected end time (rough estimate): 2026-03-23 21:14:19.162705877
+
+Potential seed found: 2388406433, with total error 80877797
+Approximately 67.313% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:45.160881482
+
+Potential seed found: 2389780361, with total error 127885486
+Approximately 67.6969% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:25.117700786
+
+Potential seed found: 2392550263, with total error 92251411
+Approximately 68.4708% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:55.768757624
+
+Potential seed found: 1318797818, with total error 82515682
+Approximately 68.4679% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:39.792172367
+
+Potential seed found: 2753617508, with total error 85260420
+Approximately 69.3518% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:09.011573441
+
+Potential seed found: 2753846575, with total error 130868055
+Approximately 69.4158% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:08.653659500
+
+Potential seed found: 607089227, with total error 86882866
+Approximately 69.6188% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:25.475614727
+
+Potential seed found: 4191894383, with total error 100843655
+Approximately 71.2018% complete.
+Projected end time (rough estimate): 2026-03-23 21:14:11.646513116
+
+Potential seed found: 614463018, with total error 113199364
+Approximately 71.679% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:15.096110438
+
+Potential seed found: 3836138650, with total error 129896707
+Approximately 71.8048% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:59.705810975
+
+Potential seed found: 616535333, with total error 132638284
+Approximately 72.258% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:09.727401323
+
+Potential seed found: 1331513541, with total error 92326072
+Approximately 72.0206% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:49.455848774
+
+Potential seed found: 2407977029, with total error 67046751
+Approximately 72.781% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:54.565473713
+
+Potential seed found: 1332778307, with total error 72862985
+Approximately 72.374% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:45.518795423
+
+Potential seed found: 259630899, with total error 112329426
+Approximately 72.54% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:45.876709364
+
+Potential seed found: 1333566288, with total error 121591306
+Approximately 72.5941% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:42.297569954
+
+Potential seed found: 3840753784, with total error 105121859
+Approximately 73.0942% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:45.389253335
+
+Potential seed found: 978807404, with total error 76189375
+Approximately 73.4756% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:55.639215536
+
+Potential seed found: 1335258312, with total error 122600717
+Approximately 73.0669% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:36.928860839
+
+Potential seed found: 980418080, with total error 120958033
+Approximately 73.9256% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:50.986334303
+
+Potential seed found: 4199232351, with total error 103061344
+Approximately 73.252% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:47.666279069
+
+Potential seed found: 4201446765, with total error 108912709
+Approximately 73.8707% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:30.844323842
+
+Potential seed found: 2772870837, with total error 125543006
+Approximately 74.7312% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:45.975539129
+
+Potential seed found: 265661088, with total error 134077157
+Approximately 74.2249% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:16.885680143
+
+Potential seed found: 3846737849, with total error 108483355
+Approximately 74.7661% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:18.187793819
+
+Potential seed found: 1700560172, with total error 125668558
+Approximately 75.131% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:40.606830014
+
+Potential seed found: 3494838944, with total error 118853547
+Approximately 76.4467% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:12.331628675
+
+Potential seed found: 3494859478, with total error 130556487
+Approximately 76.4525% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:12.331628675
+
+Potential seed found: 1346035847, with total error 123315868
+Approximately 76.0781% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:42.168027866
+
+Potential seed found: 3496861529, with total error 86768880
+Approximately 77.0118% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:58.372984976
+
+Potential seed found: 2066242601, with total error 127365298
+Approximately 77.3015% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:58.372984976
+
+Potential seed found: 2067092309, with total error 76968327
+Approximately 77.5389% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:55.151759507
+
+Potential seed found: 277794653, with total error 98322237
+Approximately 77.6149% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:22.840675052
+
+Potential seed found: 2070363684, with total error 94081580
+Approximately 78.4529% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:44.772255218
+
+Potential seed found: 279893739, with total error 112411034
+Approximately 78.2014% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:22.482761111
+
+Potential seed found: 1355869842, with total error 115595021
+Approximately 78.8257% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:12.461170763
+
+Potential seed found: 2433139831, with total error 131934200
+Approximately 79.8114% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:22.581590876
+
+Potential seed found: 2075359172, with total error 113644550
+Approximately 79.8487% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:29.739869696
+
+Potential seed found: 4220746242, with total error 103329367
+Approximately 79.2629% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:24.630244757
+
+Potential seed found: 4222166260, with total error 118054390
+Approximately 79.6596% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:16.756138055
+
+Potential seed found: 3152820433, with total error 110320636
+Approximately 80.8879% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:51.085164068
+
+Potential seed found: 3867064211, with total error 116147222
+Approximately 80.4453% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:13.763284439
+
+Potential seed found: 1720513240, with total error 127196292
+Approximately 80.7058% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:40.119373985
+
+Potential seed found: 1723558464, with total error 112067385
+Approximately 81.5567% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:31.887353342
+
+Potential seed found: 2797540075, with total error 124083204
+Approximately 81.6237% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:25.086988463
+
+Potential seed found: 3159218423, with total error 128342137
+Approximately 82.6754% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:34.263208841
+
+Potential seed found: 2802317962, with total error 132227631
+Approximately 82.9586% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:11.844172646
+
+Potential seed found: 4232500621, with total error 132080656
+Approximately 82.547% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:49.196764598
+
+Potential seed found: 3162535180, with total error 118024860
+Approximately 83.6021% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:26.389102139
+
+Potential seed found: 2804062377, with total error 93278179
+Approximately 83.446% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:07.191291413
+
+Potential seed found: 2449084985, with total error 101834170
+Approximately 84.2664% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:38.916090074
+
+Potential seed found: 658594443, with total error 111579369
+Approximately 84.0092% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:55.867587389
+
+Potential seed found: 1019049960, with total error 119892365
+Approximately 84.7193% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:55.738045301
+
+Potential seed found: 1735930295, with total error 106370067
+Approximately 85.0133% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:04.327979885
+
+Potential seed found: 661296293, with total error 129836044
+Approximately 84.7641% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:48.351394628
+
+Potential seed found: 1377045093, with total error 99029167
+Approximately 84.742% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:23.426960846
+
+Potential seed found: 3528938113, with total error 121186249
+Approximately 85.9739% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:48.937680422
+
+Potential seed found: 2098362065, with total error 130172155
+Approximately 86.2756% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:25.315360316
+
+Potential seed found: 1031477233, with total error 104016082
+Approximately 88.1914% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:51.443078009
+
+Potential seed found: 3181968902, with total error 95087414
+Approximately 89.0318% complete.
+Projected end time (rough estimate): 2026-03-23 21:08:38.786547986
+
+Potential seed found: 3538716440, with total error 102608606
+Approximately 88.706% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:48.221852540
+
+Potential seed found: 1752221006, with total error 131362762
+Approximately 89.5649% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:42.495229484
+
+Potential seed found: 3900657795, with total error 74393689
+Approximately 89.8312% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:08.265033236
+
+Potential seed found: 4257967384, with total error 120384206
+Approximately 89.6623% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:55.151759507
+
+Potential seed found: 2831527804, with total error 115900187
+Approximately 91.1197% complete.
+Projected end time (rough estimate): 2026-03-23 21:08:51.671449862
+
+Potential seed found: 2831795105, with total error 86525738
+Approximately 91.1944% complete.
+Projected end time (rough estimate): 2026-03-23 21:08:50.955621980
+
+Potential seed found: 1043481696, with total error 131953955
+Approximately 91.5454% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:14.220028145
+
+Potential seed found: 2119991605, with total error 102579536
+Approximately 92.3188% complete.
+Projected end time (rough estimate): 2026-03-23 21:08:23.396248523
+
+Potential seed found: 3194518260, with total error 111137060
+Approximately 92.5381% complete.
+Projected end time (rough estimate): 2026-03-23 21:08:04.068895709
+
+Potential seed found: 3910153732, with total error 119014040
+Approximately 92.4843% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:31.757811254
+
+Potential seed found: 3554403477, with total error 131297857
+Approximately 93.0889% complete.
+Projected end time (rough estimate): 2026-03-23 21:09:04.198437797
+
+Potential seed found: 2841347951, with total error 133324690
+Approximately 93.8634% complete.
+Projected end time (rough estimate): 2026-03-23 21:08:09.079690883
+
+Potential seed found: 3205780223, with total error 116476557
+Approximately 95.6846% complete.
+Projected end time (rough estimate): 2026-03-23 21:06:38.885377751
+
+Potential seed found: 1407836015, with total error 128391368
+Approximately 93.3448% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:07.092461648
+
+Potential seed found: 2495228487, with total error 92265473
+Approximately 97.1588% complete.
+Projected end time (rough estimate): 2026-03-23 21:05:59.514844241
+
+Potential seed found: 335810713, with total error 122895404
+Approximately 93.8244% complete.
+Projected end time (rough estimate): 2026-03-23 21:13:19.748991671
+
+Potential seed found: 3916482930, with total error 120191922
+Approximately 94.2527% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:34.293921164
+
+Potential seed found: 3920278139, with total error 115283172
+Approximately 95.3131% complete.
+Projected end time (rough estimate): 2026-03-23 21:12:08.882031353
+
+Potential seed found: 3217755566, with total error 128413104
+Approximately 99.0305% complete.
+Projected end time (rough estimate): 2026-03-23 21:05:35.176696253
+
+Potential seed found: 702745222, with total error 113291132
+Approximately 96.3447% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:50.986334303
+
+Potential seed found: 3567826737, with total error 66969866
+Approximately 96.8393% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:55.867587389
+
+Potential seed found: 1064501000, with total error 100845202
+Approximately 97.4181% complete.
+Projected end time (rough estimate): 2026-03-23 21:10:34.750664870
+
+Potential seed found: 1424405310, with total error 127534732
+Approximately 97.9742% complete.
+Projected end time (rough estimate): 2026-03-23 21:11:14.121198380
+
+Done! Finished at: 21:09:54

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 project(randomwalk)
 
 # enable or disable seed finder mode
-set(SEED_FINDER_MODE ON)
+set(SEED_FINDER_MODE OFF)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -48,18 +48,28 @@ else ()
 		sfml-window
 	)
 
+	add_subdirectory(${CMAKE_SOURCE_DIR}/vendor/json)
+
 	target_link_libraries(${PROJECT_NAME} PUBLIC
 		sfml-system
 		sfml-graphics
 		sfml-window
 		imgui
 		imgui-sfml
+		nlohmann_json
 	)
 
 	add_custom_command(
 	TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E copy_if_different
 			"${CMAKE_SOURCE_DIR}/resources/arial.ttf" ${CMAKE_BINARY_DIR}
+	COMMAND_EXPAND_LISTS
+	)
+
+	add_custom_command(
+	TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
+	COMMAND ${CMAKE_COMMAND} -E copy_if_different
+			"${CMAKE_SOURCE_DIR}/resources/presets.json" ${CMAKE_BINARY_DIR}
 	COMMAND_EXPAND_LISTS
 	)
 
