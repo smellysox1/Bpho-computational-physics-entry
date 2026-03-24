@@ -13,61 +13,92 @@
 #define TAU 6.283185307179586
 
 // PARAMETERS
-
+std::vector<particle> collidingObjects;
 unsigned int n = 11;
-unsigned int step = 20;
 unsigned int seed = std::chrono::steady_clock::now().time_since_epoch().count();
 
 unsigned int screenWidth = 1280;
 unsigned int screenHeight = 720;
 
-class PathVisualiser : public sf::Drawable, public sf::Transformable {
+std::mt19937 rng{ static_cast<std::mt19937::result_type>(seed) };//just a random seed.
+
+
+float randomFloat(std::mt19937 rng) {
+	static constexpr const float X = rng.max();
+	return rng() / X;
+}
+
+class particle : sf::CircleShape {
 public:
-	void newPath() {
-		m_vertices.clear();
-
-		m_vertices.resize(n);
-		m_vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
-
-		m_vertices[0] = {{(float)(screenWidth / 2), (float)(screenHeight / 2)}, sf::Color::White};
-
-		for (int i = 1; i < n; i++) {
-			sf::Color colour(255 * randomFloat(colourRng), 255 * randomFloat(colourRng), 255 * randomFloat(colourRng));
-
-			float angle = randomFloat(angleRng) * TAU;
-
-			const sf::Vertex& previous = m_vertices[i - 1];
-
-			float x = previous.position.x + step * std::sinf(angle);
-			float y = previous.position.y + step * std::cosf(angle);
-
-			m_vertices[i] = {{x, y}, colour};
+	float mass;
+	sf::Vector2f staleVel;
+	float speed;
+	sf::Vector2f velocity;
+	unsigned int uid = std::chrono::steady_clock::now().time_since_epoch().count()-seed;//the uid makes each particle unique.
+	virtual bool is_big() {
+		return false;
+	}
+	particle(float radius, float mass) {
+		setRadius(radius);
+		setFillColor(sf::Color::Green);
+		setPointCount(30);
+		this->mass = mass;
+		this->speed = 1;
+		velocity = { speed * std::sin(TAU * randomFloat(rng)),speed * std::cos(TAU * randomFloat(rng)) };//set initial velocity
+	}
+	bool insideParticle(sf::Vector2f point){//chekcs for if the pos is within the circle
+		sf::Vector2f dist_from_rad = point - getPosition();
+		if (dist_from_rad.length() <= getRadius()) {
+			return true;
 		}
+		return false;
 	}
-
-	void resetRng(unsigned int s) {
-		angleRng = std::mt19937(s);
+	bool isCollision(particle other) {//chekcs for if the pos is within the circle
+		sf::Vector2f dist_from_rad = other.getPosition() - this->getPosition();
+		if (dist_from_rad.length() <= (this->getRadius()+other.getRadius())) {
+			return true;
+		}
+		return false;
 	}
-
-private:
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
-		states.transform *= getTransform();
-		target.draw(m_vertices, states);
+	void update_pos() {//here because of the stupid access of sfml
+		setPosition(getPosition() + velocity);
 	}
-
-	static float randomFloat(std::mt19937& rng) {
-		static constexpr const float max = rng.max();
-		return rng() / max;
+	virtual void update() {
+		update_pos();
+		staleVel = velocity;
+		bool velDone = 0;
+		velocity = { speed * std::sin(TAU * randomFloat(rng)),speed * std::cos(TAU * randomFloat(rng)) };
 	}
+};
 
-private:
-	sf::VertexArray m_vertices;
+class bigParticle:particle {
+	virtual void update() {
+		update_pos();
+		staleVel = velocity;
+		bool velDone = 0;
+		for (particle other : collidingObjects) {
+			if (isCollision(other)) {
+				sf::Vector2f momentum = staleVel * mass;
+				sf::Vector2f other_momentum = other.staleVel * other.mass;
+				//define V for the ZMF
+				sf::Vector2f V = (momentum + other_momentum) / (mass + other.mass);
+				this->velocity = V * float(1.0 + coefficient_of_restitution) - coefficient_of_restitution * this->staleVel;
+				other.velocity = V * float(1.0 + coefficient_of_restitution) - coefficient_of_restitution * other.staleVel;
+				velDone = 1;
+				this->speed = this->velocity.x / std::sin(this->velocity.angle().asRadians());
+				other.speed=other.velocity.x/std::sin(other.velocity.angle().asRadians());
+			}
+		}//if no collision, just random walk again.
+		if (!velDone) {
+			velocity = { speed * std::sin(TAU * randomFloat(rng)),speed * std::cos(TAU * randomFloat(rng)) };
+			//if velocity goes unupdated, the 
+		}
 
-	std::mt19937 angleRng {seed};
-	std::mt19937 colourRng {seed};
+	}
 };
 
 int main() {
+	
 	sf::RenderWindow window(sf::VideoMode({screenWidth, screenHeight}), "omg that's so rnadmo wlka", sf::Style::Default);
 
 	if (!ImGui::SFML::Init(window)) {
