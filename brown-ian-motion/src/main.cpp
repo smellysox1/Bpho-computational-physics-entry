@@ -44,9 +44,11 @@ public:
 
 	unsigned int uid = std::chrono::steady_clock::now().time_since_epoch().count() - seed;//the uid makes each particle unique.
 
-	Particle() : sf::CircleShape(r, 30), speed(1.0f), velocity(speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat())) {
+	Particle() : sf::CircleShape(r, 30){
 		float distance = randomFloat() * 500.0f + R + 10.0f;
 		float angle = randomFloat() * TAU;
+		speed = 1.0f;
+		velocity = { speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat()) };
 		setPosition({distance * std::sinf(angle), distance * std::cosf(angle)});
 
 		setFillColor(sf::Color::Green);
@@ -84,7 +86,7 @@ public:
 	virtual void update() {
 		move(velocity);
 		staleVel = velocity;
-		bool velDone = 0;
+		
 		for (Particle& other : collidingObjects) {
 			if (isCollision(other)) {
 				sf::Vector2f momentum = staleVel * M;
@@ -93,16 +95,12 @@ public:
 				sf::Vector2f V = (momentum + other_momentum) / (M + m);
 				this->velocity = V * float(1.0 + C) - C * this->staleVel;
 				other.velocity = V * float(1.0 + C) - C * other.staleVel;
-				velDone = 1;
 				this->speed = this->velocity.x / std::sinf(this->velocity.angle().asRadians());
 				other.speed=other.velocity.x/std::sinf(other.velocity.angle().asRadians());
 			}
-		}//if no collision, just random walk again.
-
-		if (!velDone) {
-			velocity = { speed * std::sinf(TAU * randomFloat()),speed * std::cosf(TAU * randomFloat()) };
-			//if velocity goes unupdated, the 
 		}
+
+		
 	}
 };
 
