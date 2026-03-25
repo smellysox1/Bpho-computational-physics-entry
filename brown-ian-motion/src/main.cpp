@@ -15,7 +15,7 @@
 // PARAMETERS
 
 float M = 50.0f, m = 5.0f, R = 50.0f, r = 5.0f;
-float C = 1;
+float C = 1.0f;
 unsigned int n = 50;
 unsigned int seed = std::chrono::steady_clock::now().time_since_epoch().count();
 
@@ -44,19 +44,12 @@ public:
 
 	unsigned int uid = std::chrono::steady_clock::now().time_since_epoch().count() - seed;//the uid makes each particle unique.
 
-	virtual bool is_big() {
-		return false;
-	}
-
-	Particle() : sf::CircleShape(r, 30) {
+	Particle() : sf::CircleShape(r, 30), speed(1.0f), velocity(speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat())) {
 		float distance = randomFloat() * 500.0f + R + 10.0f;
 		float angle = randomFloat() * TAU;
 		setPosition({distance * std::sinf(angle), distance * std::cosf(angle)});
 
 		setFillColor(sf::Color::Green);
-
-		this->speed = 1;
-		velocity = {speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat())};//set initial velocity
 	}
 
 	bool insideParticle(sf::Vector2f point){//chekcs for if the pos is within the circle
@@ -69,12 +62,8 @@ public:
 		return dist_from_rad.length() <= R + r;
 	}
 
-	void update_pos() {//here because of the stupid access of sfml
-		setPosition(getPosition() + velocity);
-	}
-
 	virtual void update() {
-		update_pos();
+		move(velocity);
 		staleVel = velocity;
 		bool velDone = 0;
 		velocity = {speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat())};
@@ -88,12 +77,12 @@ public:
 		setRadius(R);
 		setFillColor(sf::Color::Red);
 		setPointCount(30);
-		this->speed = 0;
+		speed = 0.0f;
 		velocity = {0.0f, 0.0f};//set initial velocity
 	}
 
 	virtual void update() {
-		update_pos();
+		move(velocity);
 		staleVel = velocity;
 		bool velDone = 0;
 		for (Particle& other : collidingObjects) {
@@ -221,8 +210,8 @@ int main() {
 		ImGui::SliderFloat("##C", &C, 0.0f, 1.0f);
 
 		if (running || ImGui::Button("Step")) {
-			for (auto particle : collidingObjects) {
-				particle.update();
+			for (Particle& p : collidingObjects) {
+				p.update();
 			}
 
 			big.update();
@@ -237,7 +226,8 @@ int main() {
 		window.setView(camera);
 
 		window.draw(big);
-		for (auto particle : collidingObjects) {
+
+		for (Particle& particle : collidingObjects) {
 			window.draw(particle);
 		}
 
