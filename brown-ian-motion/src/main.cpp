@@ -44,12 +44,20 @@ public:
 
 	unsigned int uid = std::chrono::steady_clock::now().time_since_epoch().count() - seed;//the uid makes each particle unique.
 
-	Particle() : sf::CircleShape(r, 30), speed(1.0f), velocity(speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat())) {
+	Particle() : speed(1.0f), velocity(speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat())) {
 		float distance = randomFloat() * 500.0f + R + 10.0f;
 		float angle = randomFloat() * TAU;
 		setPosition({distance * std::sinf(angle), distance * std::cosf(angle)});
 
+		setPointCount(30);
+		updateRadius();
+
 		setFillColor(sf::Color::Green);
+	}
+
+	void updateRadius() {
+		setRadius(r);
+		setOrigin({r, r});
 	}
 
 	bool insideParticle(sf::Vector2f point){//chekcs for if the pos is within the circle
@@ -73,35 +81,34 @@ public:
 class bigParticle : public Particle {
 public:
 	bigParticle() {
-		setPosition({0,0});
-		setRadius(R);
+		setPosition({0, 0});
+		updateRadius();
 		setFillColor(sf::Color::Red);
 		setPointCount(30);
 		speed = 0.0f;
 		velocity = {0.0f, 0.0f};//set initial velocity
 	}
 
+	void updateRadius() {
+		setOrigin({R, R});
+		setRadius(R);
+	}
+
 	virtual void update() {
 		move(velocity);
 		staleVel = velocity;
-		bool velDone = 0;
+
 		for (Particle& other : collidingObjects) {
 			if (isCollision(other)) {
 				sf::Vector2f momentum = staleVel * M;
 				sf::Vector2f other_momentum = other.staleVel * m;
 				//define V for the ZMF
 				sf::Vector2f V = (momentum + other_momentum) / (M + m);
-				this->velocity = V * float(1.0 + C) - C * this->staleVel;
-				other.velocity = V * float(1.0 + C) - C * other.staleVel;
-				velDone = 1;
+				this->velocity = V * (1.0f + C) - C * this->staleVel;
+				other.velocity = V * (1.0f + C) - C * other.staleVel;
 				this->speed = this->velocity.x / std::sinf(this->velocity.angle().asRadians());
-				other.speed=other.velocity.x/std::sinf(other.velocity.angle().asRadians());
+				other.speed = other.velocity.x / std::sinf(other.velocity.angle().asRadians());
 			}
-		}//if no collision, just random walk again.
-
-		if (!velDone) {
-			velocity = { speed * std::sinf(TAU * randomFloat()),speed * std::cosf(TAU * randomFloat()) };
-			//if velocity goes unupdated, the 
 		}
 	}
 };
@@ -116,11 +123,7 @@ int main() {
 
 	bigParticle big;
 
-	collidingObjects.reserve(n);
-
-	for (int i = 0; i < n; i++) {
-		collidingObjects.emplace_back();
-	}
+	collidingObjects.resize(n);
 
 	sf::View camera(sf::FloatRect({0, 0}, {(float)screenWidth, (float)screenHeight}));
 
@@ -190,7 +193,7 @@ int main() {
 		ImGui::Text("Radius of large particle:");
 		ImGui::SameLine();
 		if (ImGui::SliderFloat("##R", &R, 1.0f, 100.0f)) {
-			big.setRadius(R);
+			big.updateRadius();
 		}
 
 		ImGui::Text("Mass of small particles:");
@@ -201,7 +204,7 @@ int main() {
 		ImGui::SameLine();
 		if (ImGui::SliderFloat("##r", &r, 1.0f, 100.0f)) {
 			for (Particle& particle : collidingObjects) {
-				particle.setRadius(r);
+				particle.updateRadius();
 			}
 		}
 
@@ -227,7 +230,7 @@ int main() {
 
 		window.draw(big);
 
-		for (Particle& particle : collidingObjects) {
+		for (const Particle& particle : collidingObjects) {
 			window.draw(particle);
 		}
 
