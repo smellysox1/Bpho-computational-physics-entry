@@ -16,7 +16,7 @@
 
 float M = 50.0f, m = 5.0f, R = 50.0f, r = 5.0f;
 float C = 1.0f;
-int n = 50;
+int n = 500;
 unsigned int seed = std::chrono::steady_clock::now().time_since_epoch().count();
 
 unsigned int screenWidth = 1280;
@@ -33,7 +33,35 @@ float randomFloat() {
 
 class Particle;
 
+
+
 std::vector<Particle> collidingObjects;
+
+class particlePath : public sf::Drawable, public sf::Transformable {
+public:
+	void newPath() {
+		m_vertices.clear();
+
+		m_vertices.resize(n);
+		m_vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
+
+		
+	}
+	void addPoint(sf::Vector2f v) {
+		m_vertices.append({ v, sf::Color::Red });
+	}
+
+private:
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
+		states.transform *= getTransform();
+		target.draw(m_vertices, states);
+	}
+
+
+private:
+	sf::VertexArray m_vertices;
+};
+particlePath path;
 
 class Particle : public sf::CircleShape {
 public:
@@ -44,9 +72,11 @@ public:
 
 	unsigned int uid = std::chrono::steady_clock::now().time_since_epoch().count() - seed;//the uid makes each particle unique.
 
-	Particle() : speed(1.0f), velocity(speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat())) {
-		float distance = randomFloat() * 5000.0f + R + 10.0f;
+	Particle() : sf::CircleShape(r, 30){
+		float distance = randomFloat() * 1000.0f + R + 10.0f;
 		float angle = randomFloat() * TAU;
+		speed = 1.0f;
+		velocity = { speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat()) };
 		setPosition({distance * std::sinf(angle), distance * std::cosf(angle)});
 
 		setPointCount(30);
@@ -87,6 +117,7 @@ public:
 		setPointCount(30);
 		speed = 0.0f;
 		velocity = {0.0f, 0.0f};//set initial velocity
+		path.addPoint({ 0,0 });
 	}
 
 	void updateRadius() {
@@ -95,21 +126,24 @@ public:
 	}
 
 	virtual void update() {
+		
 		move(velocity);
 		staleVel = velocity;
-
+		
 		for (Particle& other : collidingObjects) {
 			if (isCollision(other)) {
 				sf::Vector2f momentum = staleVel * M;
 				sf::Vector2f other_momentum = other.staleVel * m;
 				//define V for the ZMF
 				sf::Vector2f V = (momentum + other_momentum) / (M + m);
-				this->velocity = V * (1.0f + C) - C * this->staleVel;
-				other.velocity = V * (1.0f + C) - C * other.staleVel;
-				this->speed = this->velocity.x / std::sinf(this->velocity.angle().asRadians());
-				other.speed = other.velocity.x / std::sinf(other.velocity.angle().asRadians());
+				this->velocity = V * float(1.0 + C) - C * this->staleVel;
+				//the small particls having their thing actually calculated leads to weird sticking, but you can credit it to the model.
+				other.velocity = V * float(1.0 + C) - C * other.staleVel;//speed is not a factor in the big one's movement, 
+				//other.speed=other.velocity.x/std::sinf(other.velocity.angle().asRadians());
 			}
 		}
+		path.addPoint(getPosition());
+		
 	}
 };
 
@@ -120,9 +154,9 @@ int main() {
 		std::cerr << "Could not initialise ImGui for SFML" << "\n";
 		return 1;
 	}
-
+	path.newPath();
 	bigParticle big;
-
+	
 	collidingObjects.resize(n);
 
 	sf::View camera(sf::FloatRect({0, 0}, {(float)screenWidth, (float)screenHeight}));
@@ -233,7 +267,7 @@ int main() {
 		ImGui::End();
 
 		window.setView(camera);
-
+		window.draw(path);
 		window.draw(big);
 
 		for (const Particle& particle : collidingObjects) {
