@@ -16,7 +16,7 @@
 
 float M = 50.0f, m = 5.0f, R = 50.0f, r = 5.0f;
 float C = 1.0f;
-unsigned int n = 50;
+int n = 50;
 unsigned int seed = std::chrono::steady_clock::now().time_since_epoch().count();
 
 unsigned int screenWidth = 1280;
@@ -45,7 +45,7 @@ public:
 	unsigned int uid = std::chrono::steady_clock::now().time_since_epoch().count() - seed;//the uid makes each particle unique.
 
 	Particle() : speed(1.0f), velocity(speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat())) {
-		float distance = randomFloat() * 500.0f + R + 10.0f;
+		float distance = randomFloat() * 5000.0f + R + 10.0f;
 		float angle = randomFloat() * TAU;
 		setPosition({distance * std::sinf(angle), distance * std::cosf(angle)});
 
@@ -185,6 +185,12 @@ int main() {
 
 		ImGui::SetNextWindowSize({0.0f, 0.0f});
 		ImGui::Begin("Brownian Motion", nullptr, ImGuiWindowFlags_NoResize);
+
+		ImGui::Text("N:");
+		ImGui::SameLine();
+		if (ImGui::SliderInt("##N", &n, 1, 200)) {
+			collidingObjects.resize(n);
+		}
 
 		ImGui::Text("Mass of large particle:");
 		ImGui::SameLine();
