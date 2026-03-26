@@ -1,0 +1,4 @@
+#pragma once
+
+#define TAU 6.283185307179586
+

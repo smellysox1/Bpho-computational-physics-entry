@@ -39,31 +39,7 @@ class Particle;
 
 std::vector<Particle> collidingObjects;
 
-class particlePath : public sf::Drawable, public sf::Transformable {
-public:
-	void newPath() {
-		m_vertices.clear();
 
-		m_vertices.resize(n);
-		m_vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
-
-		
-	}
-	void addPoint(sf::Vector2f v) {
-		m_vertices.append({ v, sf::Color::Red });
-	}
-
-private:
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
-		states.transform *= getTransform();
-		target.draw(m_vertices, states);
-	}
-
-
-private:
-	sf::VertexArray m_vertices;
-};
-particlePath path;
 
 class Particle : public sf::CircleShape {
 public:
