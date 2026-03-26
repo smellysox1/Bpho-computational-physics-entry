@@ -16,7 +16,7 @@
 
 float M = 50.0f, m = 5.0f, R = 50.0f, r = 5.0f;
 float C = 1.0f;
-int n = 500;
+unsigned int n = 100;
 unsigned int seed = std::chrono::steady_clock::now().time_since_epoch().count();
 
 unsigned int screenWidth = 1280;
@@ -39,31 +39,7 @@ class Particle;
 
 std::vector<Particle> collidingObjects;
 
-class particlePath : public sf::Drawable, public sf::Transformable {
-public:
-	void newPath() {
-		m_vertices.clear();
 
-		m_vertices.resize(n);
-		m_vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
-
-		
-	}
-	void addPoint(sf::Vector2f v) {
-		m_vertices.append({ v, sf::Color::Red });
-	}
-
-private:
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
-		states.transform *= getTransform();
-		target.draw(m_vertices, states);
-	}
-
-
-private:
-	sf::VertexArray m_vertices;
-};
-particlePath path;
 
 class Particle : public sf::CircleShape {
 public:
@@ -221,12 +197,6 @@ int main() {
 
 		ImGui::SetNextWindowSize({0.0f, 0.0f});
 		ImGui::Begin("Brownian Motion", nullptr, ImGuiWindowFlags_NoResize);
-
-		ImGui::Text("N:");
-		ImGui::SameLine();
-		if (ImGui::SliderInt("##N", &n, 1, 200)) {
-			collidingObjects.resize(n);
-		}
 
 		ImGui::Text("Mass of large particle:");
 		ImGui::SameLine();

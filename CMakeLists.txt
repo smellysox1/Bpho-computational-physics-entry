@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 project(bpho_computational_physics_challenge_entry)
 
-set(TASK brown-ian-motion)
+set(TASK photo-electric-jud)
 set(SEED_FINDER_MODE OFF)
 
 set(CMAKE_CXX_STANDARD 23)
@@ -44,6 +44,19 @@ if (${TASK} STREQUAL randomWalk)
 
 elseif(${TASK} STREQUAL brown-ian-motion)
     file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/brown-ian-motion/src/*.cpp)
+
+	add_subdirectory(${CMAKE_SOURCE_DIR}/vendor/sfml)
+    add_subdirectory(${CMAKE_SOURCE_DIR}/vendor)
+
+	target_link_libraries(${TASK} PUBLIC
+		sfml-system
+		sfml-graphics
+		sfml-window
+		imgui
+		imgui-sfml
+	)
+elseif(${TASK} STREQUAL photo-electric-jud)
+    file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/photo-electric-jud/src/*.cpp)
 
 	add_subdirectory(${CMAKE_SOURCE_DIR}/vendor/sfml)
     add_subdirectory(${CMAKE_SOURCE_DIR}/vendor)
