@@ -307,11 +307,12 @@ int main() {
 			emitter_slower_factor = (100/intensity);
 			float sum_electrons = 0.0f;
 			for (Particle& p : electrons) {
-				// current = the number of electrons times their speed times the electron charge over their distance
+				// current is the charge flow per time, so we can do for each electron's charge times speed/distance between nodes
+
 				p.update();
 				sum_electrons += p.speed;
 			}
-			current = sum_electrons / 180 *1.6 / pow(10, 10); //1.6 to -19 to convert electron to coulomb, 
+			current = sum_electrons / 180 *1.602 / pow(10, 10); //1.6 to -19 to convert electron to coulomb, 
 			for (Photon& ph : photons) {
 				ph.update();
 			}
