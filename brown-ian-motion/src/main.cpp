@@ -10,7 +10,7 @@
 #include <vector>
 #include <filesystem>
 
-#include "constants.hpp"
+#define TAU 6.283185307179586
 
 // PARAMETERS
 
@@ -46,9 +46,8 @@ public:
 
 		m_vertices.resize(n);
 		m_vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
-
-		
 	}
+
 	void addPoint(sf::Vector2f v) {
 		m_vertices.append({ v, sf::Color::Red });
 	}
@@ -59,10 +58,10 @@ private:
 		target.draw(m_vertices, states);
 	}
 
-
 private:
 	sf::VertexArray m_vertices;
 };
+
 particlePath path;
 
 class Particle : public sf::CircleShape {
@@ -128,24 +127,22 @@ public:
 	}
 
 	virtual void update() {
-		
 		move(velocity);
 		staleVel = velocity;
-		
+
 		for (Particle& other : collidingObjects) {
 			if (isCollision(other)) {
 				sf::Vector2f momentum = staleVel * M;
 				sf::Vector2f other_momentum = other.staleVel * m;
 				//define V for the ZMF
 				sf::Vector2f V = (momentum + other_momentum) / (M + m);
-				this->velocity = V * float(1.0 + C) - C * this->staleVel;
+				this->velocity = V * (1.0f + C) - C * this->staleVel;
 				//the small particls having their thing actually calculated leads to weird sticking, but you can credit it to the model.
-				other.velocity = V * float(1.0 + C) - C * other.staleVel;//speed is not a factor in the big one's movement, 
+				other.velocity = V * (1.0f + C) - C * other.staleVel;//speed is not a factor in the big one's movement,
 				//other.speed=other.velocity.x/std::sinf(other.velocity.angle().asRadians());
 			}
 		}
 		path.addPoint(getPosition());
-		
 	}
 };
 
@@ -158,7 +155,7 @@ int main() {
 	}
 	path.newPath();
 	bigParticle big;
-	
+
 	collidingObjects.resize(n);
 
 	sf::View camera(sf::FloatRect({0, 0}, {(float)screenWidth, (float)screenHeight}));

@@ -1,0 +1,6 @@
+macro(CopyResources)
+    foreach(arg IN ITEMS ${ARGN})
+        message(STATUS "Copying ${arg} to binary directory")
+        configure_file("${arg}" "${CMAKE_BINARY_DIR}" COPYONLY)
+    endforeach()
+endmacro()

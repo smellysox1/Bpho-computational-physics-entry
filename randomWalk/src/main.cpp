@@ -82,11 +82,6 @@ int main() {
 
 	sf::View camera(sf::FloatRect({0, 0}, {(float)screenWidth, (float)screenHeight}));
 
-	sf::Font font;
-	if (!font.openFromFile("arial.ttf")) {
-		std::cerr << "Could not load font." << "\n";
-	}
-
 	sf::Clock clock;
 
 	float zoom = 1.0f;

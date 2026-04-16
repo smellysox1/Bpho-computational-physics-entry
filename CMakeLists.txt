@@ -1,75 +1,60 @@
 cmake_minimum_required(VERSION 3.13)
 project(bpho_computational_physics_challenge_entry)
 
-set(TASK photo-electric-jud)
+set(TASK electron_diffraction)
 set(SEED_FINDER_MODE OFF)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(${TASK})
+add_executable("${TASK}")
 
-set(SFML_SHARED_LIRARIES FALSE)
-set(SFML_STATIC_LIBRARIES TRUE)
-set(SFML_BUILD_WINDOW TRUE)
-set(SFML_BUILD_GRAPHICS TRUE)
-set(SFML_BUILD_AUDIO FALSE)
-set(SFML_BUILD_NETWORK FALSE)
+include("${CMAKE_SOURCE_DIR}/cmake/LinkLibraries.cmake")
 
-if (${TASK} STREQUAL randomWalk)
+if ("${TASK}" STREQUAL "randomWalk")
     if (SEED_FINDER_MODE)
-        file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/randomWalk/seed_finder/*.cpp)
+        file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/randomWalk/seed_finder/*.cpp")
     else ()
-        file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/randomWalk/src/*.cpp)
+        file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/randomWalk/src/*.cpp")
+
+		LinkLibraries(
+			SFML
+			ImGui
+			ImGuiSFML
+			JSON
+		)
+
+		include("${CMAKE_SOURCE_DIR}/cmake/CopyResources.cmake")
+		CopyResources("${CMAKE_SOURCE_DIR}/randomWalk/resources/presets.json")
     endif()
+elseif ("${TASK}" STREQUAL "brown-ian-motion")
+	file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/${TASK}/brown-ian-motion/*.cpp")
 
-	add_subdirectory(${CMAKE_SOURCE_DIR}/vendor/sfml)
-    add_subdirectory(${CMAKE_SOURCE_DIR}/vendor)
-	add_subdirectory(${CMAKE_SOURCE_DIR}/vendor/json)
-
-	target_link_libraries(${TASK} PUBLIC
-		sfml-system
-		sfml-graphics
-		sfml-window
-		imgui
-		imgui-sfml
-		nlohmann_json
+	LinkLibraries(
+		SFML
+		ImGui
+		ImGuiSFML
 	)
+elseif ("${TASK}" STREQUAL "photo-electric-jud")
+    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/photo-electric-jud/src/*.cpp")
 
-	add_custom_command(TARGET ${TASK} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_SOURCE_DIR}/randomWalk/resources/presets.json" ${CMAKE_BINARY_DIR}
-        COMMAND_EXPAND_LISTS
+	LinkLibraries(
+		SFML
+		ImGui
+		ImGuiSFML
+		JSON
 	)
+elseif ("${TASK}" STREQUAL "electron_diffraction")
+    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/electron_diffraction/src/*.cpp")
 
-elseif(${TASK} STREQUAL brown-ian-motion)
-    file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/brown-ian-motion/src/*.cpp)
-
-	add_subdirectory(${CMAKE_SOURCE_DIR}/vendor/sfml)
-    add_subdirectory(${CMAKE_SOURCE_DIR}/vendor)
-
-	target_link_libraries(${TASK} PUBLIC
-		sfml-system
-		sfml-graphics
-		sfml-window
-		imgui
-		imgui-sfml
-	)
-elseif(${TASK} STREQUAL photo-electric-jud)
-    file(GLOB_RECURSE SRC_FILES ${CMAKE_SOURCE_DIR}/photo-electric-jud/src/*.cpp)
-
-	add_subdirectory(${CMAKE_SOURCE_DIR}/vendor/sfml)
-    add_subdirectory(${CMAKE_SOURCE_DIR}/vendor)
-
-	target_link_libraries(${TASK} PUBLIC
-		sfml-system
-		sfml-graphics
-		sfml-window
-		imgui
-		imgui-sfml
+	LinkLibraries(
+		GLFW
+		Glad
+		ImGui
 	)
 else ()
     message(FATAL_ERROR "Task ${TASK} does not match any known task.")
 endif ()
 
-target_sources(${TASK} PUBLIC ${SRC_FILES})
+target_sources("${TASK}" PUBLIC "${SRC_FILES}")
