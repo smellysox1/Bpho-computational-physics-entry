@@ -8,6 +8,8 @@ target_sources(imgui PUBLIC
     ${CMAKE_SOURCE_DIR}/vendor/imgui/imgui_draw.cpp
     ${CMAKE_SOURCE_DIR}/vendor/imgui/imgui_tables.cpp
     ${CMAKE_SOURCE_DIR}/vendor/imgui/imgui_widgets.cpp
+    ${CMAKE_SOURCE_DIR}/vendor/imgui/backends/imgui_impl_opengl3.cpp
+    ${CMAKE_SOURCE_DIR}/vendor/imgui/backends/imgui_impl_glfw.cpp
 )
 
 target_include_directories(imgui PUBLIC ${CMAKE_SOURCE_DIR}/vendor/imgui)

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 project(bpho_computational_physics_challenge_entry)
 
-set(TASK electron_diffraction)
+set(TASK hydrogenic_orbitals)
 set(SEED_FINDER_MODE OFF)
 
 set(CMAKE_CXX_STANDARD 23)
@@ -52,6 +52,31 @@ elseif ("${TASK}" STREQUAL "electron_diffraction")
 		GLFW
 		Glad
 		ImGui
+	)
+elseif ("${TASK}" STREQUAL "black_body_radiation_spectrum")
+    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/black_body_radiation_spectrum/src/*.cpp")
+
+	LinkLibraries(
+		R++
+	)
+elseif ("${TASK}" STREQUAL "quantum_cryptography")
+    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/quantum_cryptography/src/*.cpp")
+
+	LinkLibraries(
+		GLFW
+		Glad
+		ImGui
+	)
+
+	target_include_directories(${TASK} PRIVATE "${CMAKE_SOURCE_DIR}/vendor/stb")
+elseif (${TASK} STREQUAL "hydrogenic_orbitals")
+    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/hydrogenic_orbitals/src/*.cpp")
+
+	LinkLibraries(
+		GLFW
+		Glad
+		ImGui
+		GLM
 	)
 else ()
     message(FATAL_ERROR "Task ${TASK} does not match any known task.")
