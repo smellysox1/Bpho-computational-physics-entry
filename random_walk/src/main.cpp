@@ -34,14 +34,14 @@ public:
 		m_vertices[0] = {{(float)(screenWidth / 2), (float)(screenHeight / 2)}, sf::Color::White};
 
 		for (int i = 1; i < n; i++) {
-			sf::Color colour(255 * randomFloat(colourRng), 255 * randomFloat(colourRng), 255 * randomFloat(colourRng));
+			sf::Color colour((uint32_t)(randomFloat(colourRng) * 255), (uint32_t)(randomFloat(colourRng) * 255), (uint32_t)(randomFloat(colourRng) * 255));
 
 			float angle = randomFloat(angleRng) * TAU;
 
 			const sf::Vertex& previous = m_vertices[i - 1];
 
-			float x = previous.position.x + step * std::sinf(angle);
-			float y = previous.position.y + step * std::cosf(angle);
+			float x = previous.position.x + step * std::sin(angle);
+			float y = previous.position.y + step * std::cos(angle);
 
 			m_vertices[i] = {{x, y}, colour};
 		}
@@ -70,7 +70,9 @@ private:
 };
 
 int main() {
-	sf::RenderWindow window(sf::VideoMode({screenWidth, screenHeight}), "omg that's so rnadmo wlka", sf::Style::Default);
+	sf::RenderWindow window(sf::VideoMode({screenWidth, screenHeight}), "Random Walk", sf::Style::Default);
+
+	window.setFramerateLimit(60);
 
 	if (!ImGui::SFML::Init(window)) {
 		std::cerr << "Could not initialise ImGui for SFML" << "\n";

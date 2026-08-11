@@ -10,7 +10,7 @@
 #include <vector>
 #include <filesystem>
 
-#define TAU 6.283185307179586
+#define TAU 6.2831855f
 
 // PARAMETERS
 
@@ -33,33 +33,34 @@ float randomFloat() {
 
 class Particle;
 
-//todo : 
-//Make UI window less dsigusting
-//Have changing settings reset the simulation (to make N changeable.)
-
 std::vector<Particle> collidingObjects;
 
 class particlePath : public sf::Drawable, public sf::Transformable {
 public:
 	void newPath() {
-		m_vertices.clear();
+		vertices.clear();
 
-		m_vertices.resize(n);
-		m_vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
+		vertices.append({{0.0f, 0.0f}, sf::Color::Blue});
+
+		vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
 	}
 
-	void addPoint(sf::Vector2f v) {
-		m_vertices.append({ v, sf::Color::Red });
+	void addPoint(sf::Vector2f pos) {
+		vertices.append({pos, sf::Color::Blue});
+	}
+
+	void setLastVertex(sf::Vector2f pos) {
+		vertices[vertices.getVertexCount() - 1].position = pos;
 	}
 
 private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
 		states.transform *= getTransform();
-		target.draw(m_vertices, states);
+		target.draw(vertices, states);
 	}
 
 private:
-	sf::VertexArray m_vertices;
+	sf::VertexArray vertices;
 };
 
 particlePath path;
@@ -67,18 +68,22 @@ particlePath path;
 class Particle : public sf::CircleShape {
 public:
 	sf::Vector2f velocity;
-	sf::Vector2f staleVel;
+	sf::Vector2f previousVelocity;
 
 	float speed;
 
 	unsigned int uid = std::chrono::steady_clock::now().time_since_epoch().count() - seed;//the uid makes each particle unique.
 
 	Particle() : sf::CircleShape(r, 30){
-		float distance = randomFloat() * 1000.0f + R + 10.0f;
-		float angle = randomFloat() * TAU;
 		speed = 1.0f;
-		velocity = { speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat()) };
-		setPosition({distance * std::sinf(angle), distance * std::cosf(angle)});
+
+		float velocityAngle = randomFloat() * TAU;
+		velocity = {speed * std::sin(velocityAngle), speed * std::cos(velocityAngle)};
+
+		float distance = randomFloat() * 1000.0f + R + 10.0f;
+
+		float positionAngle = randomFloat() * TAU;
+		setPosition({distance * std::sin(positionAngle), distance * std::cos(positionAngle)});
 
 		setPointCount(30);
 		updateRadius();
@@ -103,9 +108,17 @@ public:
 
 	virtual void update() {
 		move(velocity);
-		staleVel = velocity;
-		bool velDone = 0;
-		velocity = {speed * std::sinf(TAU * randomFloat()), speed * std::cosf(TAU * randomFloat())};
+		previousVelocity = velocity;
+
+		float angle = randomFloat() * TAU;
+		velocity = {speed * std::sin(angle), speed * std::cos(angle)};
+	}
+
+	virtual void update(sf::Vector2f v) {
+		move(velocity);
+		previousVelocity = velocity;
+
+		velocity = v;
 	}
 };
 
@@ -118,7 +131,7 @@ public:
 		setPointCount(30);
 		speed = 0.0f;
 		velocity = {0.0f, 0.0f};//set initial velocity
-		path.addPoint({ 0,0 });
+		path.addPoint({0, 0});
 	}
 
 	void updateRadius() {
@@ -128,31 +141,45 @@ public:
 
 	virtual void update() {
 		move(velocity);
-		staleVel = velocity;
+		previousVelocity = velocity;
+
+		bool velocityChanging = false;
 
 		for (Particle& other : collidingObjects) {
-			if (isCollision(other)) {
-				sf::Vector2f momentum = staleVel * M;
-				sf::Vector2f other_momentum = other.staleVel * m;
-				//define V for the ZMF
-				sf::Vector2f V = (momentum + other_momentum) / (M + m);
-				this->velocity = V * (1.0f + C) - C * this->staleVel;
-				//the small particls having their thing actually calculated leads to weird sticking, but you can credit it to the model.
-				other.velocity = V * (1.0f + C) - C * other.staleVel;//speed is not a factor in the big one's movement,
-				//other.speed=other.velocity.x/std::sinf(other.velocity.angle().asRadians());
+			if (!isCollision(other)) {
+				other.update();
+				continue;
 			}
+
+			sf::Vector2f momentum = previousVelocity * M;
+			sf::Vector2f other_momentum = other.previousVelocity * m;
+			//define V for the ZMF
+			sf::Vector2f V = (momentum + other_momentum) / (M + m);
+			this->velocity = V * (1.0f + C) - C * this->previousVelocity;
+			//the small particls having their thing actually calculated leads to weird sticking, but you can credit it to the model.
+			other.update(V * (1.0f + C) - C * other.previousVelocity);//speed is not a factor in the big one's movement,
+			//other.speed=other.velocity.x/std::sinf(other.velocity.angle().asRadians());
+
+			velocityChanging = true;
 		}
-		path.addPoint(getPosition());
+
+		path.setLastVertex(getPosition());
+
+		if (velocityChanging)
+			path.addPoint(getPosition());
 	}
 };
 
 int main() {
 	sf::RenderWindow window(sf::VideoMode({screenWidth, screenHeight}), "Brownian motion", sf::Style::Default);
 
+	window.setFramerateLimit(60);
+
 	if (!ImGui::SFML::Init(window)) {
 		std::cerr << "Could not initialise ImGui for SFML" << "\n";
 		return 1;
 	}
+
 	path.newPath();
 	bigParticle big;
 
@@ -219,21 +246,17 @@ int main() {
 		ImGui::SetNextWindowSize({0.0f, 0.0f});
 		ImGui::Begin("Brownian Motion", nullptr, ImGuiWindowFlags_NoResize);
 
-		ImGui::Text("N:");
-		ImGui::SameLine();
-		if (ImGui::SliderInt("##N", &n, 1, 200)) {
+		ImGui::Text("N:"); ImGui::SameLine();
+		if (ImGui::SliderInt("##N", &n, 1, 2000)) {
 			collidingObjects.resize(n);
 		}
 
-		ImGui::Text("Mass of large particle:");
-		ImGui::SameLine();
+		ImGui::Text("Mass of large particle:"); ImGui::SameLine();
 		ImGui::SliderFloat("##M", &M, 1.0f, 100.0f);
 
-		ImGui::Text("Radius of large particle:");
-		ImGui::SameLine();
-		if (ImGui::SliderFloat("##R", &R, 1.0f, 100.0f)) {
+		ImGui::Text("Radius of large particle:"); ImGui::SameLine();
+		if (ImGui::SliderFloat("##R", &R, 1.0f, 100.0f))
 			big.updateRadius();
-		}
 
 		ImGui::Text("Mass of small particles:");
 		ImGui::SameLine();
@@ -242,9 +265,8 @@ int main() {
 		ImGui::Text("Radius of small particles:");
 		ImGui::SameLine();
 		if (ImGui::SliderFloat("##r", &r, 1.0f, 100.0f)) {
-			for (Particle& particle : collidingObjects) {
+			for (Particle& particle : collidingObjects)
 				particle.updateRadius();
-			}
 		}
 
 		ImGui::Text("Coefficient of Restitution:");
@@ -252,16 +274,11 @@ int main() {
 		ImGui::SliderFloat("##C", &C, 0.0f, 1.0f);
 
 		if (running || ImGui::Button("Step")) {
-			for (Particle& p : collidingObjects) {
-				p.update();
-			}
-
 			big.update();
 		}
 
-		if (ImGui::Button(running ? "Pause" : "Play")) {
+		if (ImGui::Button(running ? "Pause" : "Play"))
 			running = !running;
-		}
 
 		ImGui::End();
 
@@ -269,9 +286,8 @@ int main() {
 		window.draw(path);
 		window.draw(big);
 
-		for (const Particle& particle : collidingObjects) {
+		for (const Particle& particle : collidingObjects)
 			window.draw(particle);
-		}
 
 		ImGui::SFML::Render(window);
 

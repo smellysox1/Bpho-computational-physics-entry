@@ -38,30 +38,26 @@ private:
     GLuint shaderProgram;
 
     const char* vertexSource = "#version 330 core\n"
-"layout (location = 0) in vec3 aPos;\n"
-"layout (location = 1) in vec3 aColor;\n"
-"layout (location = 2) in vec2 aTexCoord;\n"
+"layout (location = 0) in vec2 pos;\n"
+"layout (location = 1) in vec2 texCoord;\n"
 
-"out vec3 ourColor;\n"
-"out vec2 TexCoord;\n"
+"out vec2 fragTexCoord;\n"
 
 "void main()\n"
 "{\n"
-	"gl_Position = vec4(aPos, 1.0);\n"
-	"ourColor = aColor;\n"
-	"TexCoord = vec2(aTexCoord.x, aTexCoord.y);\n"
+	"gl_Position = vec4(pos, 0.0, 1.0);\n"
+	"fragTexCoord = texCoord;\n"
 "}";
 
     const char* fragmentSource = "#version 330 core\n"
-"out vec4 FragColor;\n"
+"out vec4 colour;\n"
 
-"in vec3 ourColor;\n"
-"in vec2 TexCoord;\n"
+"in vec2 fragTexCoord;\n"
 "uniform sampler2D texture1;\n"
 
 "void main()\n"
 "{\n"
-	"FragColor = texture(texture1, TexCoord);\n"
+	"colour = texture(texture1, fragTexCoord);\n"
 "}\n";
 };
 }

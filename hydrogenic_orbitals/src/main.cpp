@@ -95,7 +95,7 @@ int main() {
     glEnable(GL_BLEND);
     glEnable(GL_DEPTH_TEST);
 
-    planes::init(96, shader);
+    planes::init(128, shader);
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -130,19 +130,16 @@ int main() {
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
+        ImGui::SetNextWindowSize({0.0f, 0.0f});
         ImGui::Begin("Hydrogenic Orbitals");
 
         if (ImGui::DragFloat("Size", &size, 0.0625f)) {
-            if (size < 0.0f)
-                size = 0.0f;
-
+            size = std::max(size, 0.0625f);
             shader.set1f("size", size);
         }
 
         if (ImGui::DragFloat("Max Probability Density", &maxPD, 0.015625f)) {
-            if (maxPD < 0.0f)
-                maxPD = 0.0f;
-
+            maxPD = std::max(maxPD, 0.015625f);
             shader.set1f("maxPD", maxPD);
         }
 

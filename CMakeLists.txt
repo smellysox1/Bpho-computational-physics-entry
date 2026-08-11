@@ -1,49 +1,45 @@
 cmake_minimum_required(VERSION 3.13)
 project(bpho_computational_physics_challenge_entry)
 
-set(TASK hydrogenic_orbitals)
+set(TASK brownian_motion)
 set(SEED_FINDER_MODE OFF)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable("${TASK}")
+add_executable(${TASK})
 
 include("${CMAKE_SOURCE_DIR}/cmake/LinkLibraries.cmake")
 
-if ("${TASK}" STREQUAL "randomWalk")
+if ("${TASK}" STREQUAL "random_walk")
     if (SEED_FINDER_MODE)
-        file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/randomWalk/seed_finder/*.cpp")
+        file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/random_walk/seed_finder/*.cpp")
     else ()
-        file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/randomWalk/src/*.cpp")
+        file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/random_walk/src/*.cpp")
 
 		LinkLibraries(
 			SFML
-			ImGui
 			ImGuiSFML
 			JSON
 		)
 
 		include("${CMAKE_SOURCE_DIR}/cmake/CopyResources.cmake")
-		CopyResources("${CMAKE_SOURCE_DIR}/randomWalk/resources/presets.json")
+		CopyResources("${CMAKE_SOURCE_DIR}/random_walk/resources/presets.json")
     endif()
-elseif ("${TASK}" STREQUAL "brown-ian-motion")
-	file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/${TASK}/brown-ian-motion/*.cpp")
+elseif ("${TASK}" STREQUAL "brownian_motion")
+	file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/${TASK}/src/*.cpp")
 
 	LinkLibraries(
 		SFML
-		ImGui
 		ImGuiSFML
 	)
-elseif ("${TASK}" STREQUAL "photo-electric-jud")
-    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/photo-electric-jud/src/*.cpp")
+elseif ("${TASK}" STREQUAL "photoelectric_effect")
+    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/photoelectric_effect/src/*.cpp")
 
 	LinkLibraries(
 		SFML
-		ImGui
 		ImGuiSFML
-		JSON
 	)
 elseif ("${TASK}" STREQUAL "electron_diffraction")
     file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/electron_diffraction/src/*.cpp")
@@ -51,21 +47,25 @@ elseif ("${TASK}" STREQUAL "electron_diffraction")
 	LinkLibraries(
 		GLFW
 		Glad
-		ImGui
+		ImGuiGLFW
 	)
 elseif ("${TASK}" STREQUAL "black_body_radiation_spectrum")
-    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/black_body_radiation_spectrum/src/*.cpp")
+    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/black_body_radiation_spectrum/src/plancks_law.cpp")
+
+	add_executable("heat_capacity" "${CMAKE_SOURCE_DIR}/black_body_radiation_spectrum/src/heat_capacity.cpp")
 
 	LinkLibraries(
 		R++
 	)
+
+	target_link_libraries("heat_capacity" rplusplus)
 elseif ("${TASK}" STREQUAL "quantum_cryptography")
     file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/quantum_cryptography/src/*.cpp")
 
 	LinkLibraries(
 		GLFW
 		Glad
-		ImGui
+		ImGuiGLFW
 	)
 
 	target_include_directories(${TASK} PRIVATE "${CMAKE_SOURCE_DIR}/vendor/stb")
@@ -75,7 +75,7 @@ elseif (${TASK} STREQUAL "hydrogenic_orbitals")
 	LinkLibraries(
 		GLFW
 		Glad
-		ImGui
+		ImGuiGLFW
 		GLM
 	)
 else ()

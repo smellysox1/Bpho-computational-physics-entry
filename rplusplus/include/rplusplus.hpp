@@ -24,7 +24,7 @@ namespace rpp {
     inline GLFWwindow* window;
     inline std::vector<Parameter> parameters;
     inline rpp::Shader shader;
-    inline unsigned int VAO;
+    inline unsigned int vertexArray;
     inline unsigned int texture;
 
     void runSourceFile(std::string_view rFilePath, std::string_view outputDir);
