@@ -31,7 +31,7 @@ public:
 		vertices.resize(n);
 		vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
 
-		vertices[0] = {{(float)(screenWidth / 2), (float)(screenHeight / 2)}, sf::Color::White};
+		vertices[0] = {{(float)(screenWidth >> 1), (float)(screenHeight >> 1)}, sf::Color::White};
 
 		for (int i = 1; i < n; i++) {
 			sf::Color colour((uint32_t)(randomFloat(colourRng) * 255), (uint32_t)(randomFloat(colourRng) * 255), (uint32_t)(randomFloat(colourRng) * 255));
