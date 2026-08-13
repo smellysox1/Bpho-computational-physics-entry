@@ -71,8 +71,6 @@ public:
 	}
 };
 
-
-
 Detector detector;
 Emitter emitter;
 Detector plate2;
@@ -140,7 +138,7 @@ public:
 	Photon(sf::Vector2f pos) : Particle(pos) {
 		float angle = 0.7853982f;//update angle such that it is perp to emitter.
 		speed = 3.0f;
-		velocity = { speed * std::sin(angle), speed * std::cos(angle) };
+		velocity = {speed * std::sin(angle), speed * std::cos(angle) };
 		setPosition(pos);
 
 		setPointCount(30);
@@ -153,7 +151,7 @@ public:
 		//update angle such that it is perp to emitter.
 		speed = 0.3f;//0.3m in 1ns
 		velocity = {speed * std::sin(3.9269907f), speed * std::cos(3.9269907f)}; // 5pi/4
-		float pos_on_line = randomFloat() * 100;
+		float pos_on_line = randomFloat() * 100.0f;
 		setPosition({500.0f - pos_on_line * std::cos(0.7853982f), 500.0f + pos_on_line * std::sin(0.7853982f)});//preferably somewhere random on the emitter -- 
 
 		setPointCount(30);
@@ -185,9 +183,9 @@ public:
 			float electronSpeed = std::sqrt(2.0f * (Energy - W) * 1.602e-13f / m) * std::pow(10, -9);//sqrt(2*(Energy-W)/m) is in ms^-1 with kg we need in m/ns
 			if (electronSpeed > 0) {
 				electrons.emplace_back();
+
 				electrons[electrons.size() - 1].speed = electronSpeed;//energy=energy-w
 				electrons[electrons.size() - 1].velocity = { electronSpeed,0 };
-
 				electrons[electrons.size() - 1].setPosition({30.0f, getPosition().y - (getPosition().x - 30.0f) / std::tanf(0.625f * (float)TAU)});//electron speed but subtract the amount increasedin themeantime
 			}
 		}
@@ -281,7 +279,7 @@ int main() {
 		ImGui::SameLine();
 		ImGui::SliderFloat("##intensity", &intensity, 0.0f, 100.0f);
 
-		ImGui::Text("current (predicted):");
+		ImGui::Text("Expected current (e s^-1):");
 		ImGui::SameLine();
 		ImGui::Text(std::to_string(current).c_str());
 
@@ -291,7 +289,7 @@ int main() {
 
 		ImGui::Text("flow of time per frame (ns):");
 		ImGui::SameLine();
-		ImGui::SliderFloat("##timeflow", &time_scale_factor, 1.0f, 25.0f);
+		ImGui::SliderFloat("##timeflow", &time_scale_factor, 1.0f, 250.0f);
 
 		if (running || ImGui::Button("Step")) {
 			Energy = 1240.8f / wavelength;
@@ -304,7 +302,7 @@ int main() {
 				sum_electrons += p.speed;
 			}
 
-			current = sum_electrons / 180.0f; //1.6 to -19 to convert electron to coulomb,
+			current = 5555555.5f * sum_electrons;
 
 			for (Photon& ph : photons)
 				ph.update();

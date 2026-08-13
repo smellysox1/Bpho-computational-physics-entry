@@ -70,13 +70,11 @@ public:
 	sf::Vector2f velocity;
 	sf::Vector2f previousVelocity;
 
-	float speed;
+	float speed = 1.0f;
 
 	unsigned int uid = std::chrono::steady_clock::now().time_since_epoch().count() - seed;//the uid makes each particle unique.
 
 	Particle() : sf::CircleShape(r, 30){
-		speed = 1.0f;
-
 		float velocityAngle = randomFloat() * TAU;
 		velocity = {speed * std::sin(velocityAngle), speed * std::cos(velocityAngle)};
 
@@ -94,11 +92,6 @@ public:
 	void updateRadius() {
 		setRadius(r);
 		setOrigin({r, r});
-	}
-
-	bool insideParticle(sf::Vector2f point){//chekcs for if the pos is within the circle
-		sf::Vector2f dist_from_rad = point - getPosition();
-		return dist_from_rad.length() <= r;
 	}
 
 	bool isCollision(const Particle& other) {//chekcs for if the pos is within the circle
@@ -129,7 +122,6 @@ public:
 		updateRadius();
 		setFillColor(sf::Color::Red);
 		setPointCount(30);
-		speed = 0.0f;
 		velocity = {0.0f, 0.0f};//set initial velocity
 		path.addPoint({0, 0});
 	}
@@ -155,10 +147,9 @@ public:
 			sf::Vector2f other_momentum = other.previousVelocity * m;
 			//define V for the ZMF
 			sf::Vector2f V = (momentum + other_momentum) / (M + m);
-			this->velocity = V * (1.0f + C) - C * this->previousVelocity;
-			//the small particls having their thing actually calculated leads to weird sticking, but you can credit it to the model.
-			other.update(V * (1.0f + C) - C * other.previousVelocity);//speed is not a factor in the big one's movement,
-			//other.speed=other.velocity.x/std::sinf(other.velocity.angle().asRadians());
+
+			velocity = C * (V - previousVelocity) + V;
+			other.update(C * (V -  other.previousVelocity) + V);
 
 			velocityChanging = true;
 		}
@@ -273,9 +264,8 @@ int main() {
 		ImGui::SameLine();
 		ImGui::SliderFloat("##C", &C, 0.0f, 1.0f);
 
-		if (running || ImGui::Button("Step")) {
+		if (running || ImGui::Button("Step"))
 			big.update();
-		}
 
 		if (ImGui::Button(running ? "Pause" : "Play"))
 			running = !running;

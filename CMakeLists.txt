@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 project(bpho_computational_physics_challenge_entry)
 
-set(TASK brownian_motion)
+set(TASK random_walk)
 set(SEED_FINDER_MODE OFF)
 
 set(CMAKE_CXX_STANDARD 23)
@@ -48,6 +48,12 @@ elseif ("${TASK}" STREQUAL "electron_diffraction")
 		GLFW
 		Glad
 		ImGuiGLFW
+	)
+elseif ("${TASK}" STREQUAL "electron_diffraction_model_verifier")
+    file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/electron_diffraction/model_verifier/main.cpp")
+
+	LinkLibraries(
+		R++
 	)
 elseif ("${TASK}" STREQUAL "black_body_radiation_spectrum")
     file(GLOB_RECURSE SRC_FILES "${CMAKE_SOURCE_DIR}/black_body_radiation_spectrum/src/plancks_law.cpp")

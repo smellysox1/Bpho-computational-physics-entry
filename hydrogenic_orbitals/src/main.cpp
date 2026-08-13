@@ -88,8 +88,6 @@ int main() {
     shader.set1f("size", size);
     shader.set1f("maxPD", maxPD);
 
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     glEnable(GL_BLEND);

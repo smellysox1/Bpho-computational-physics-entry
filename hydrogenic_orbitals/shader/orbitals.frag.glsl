@@ -79,6 +79,7 @@ float poly_legendre_p(float x) {
 
     if (l == 0)
         return p_lm2;
+
     if (l == 1)
         return x;
 

@@ -26,24 +26,24 @@ unsigned int screenHeight = 720;
 class PathVisualiser : public sf::Drawable, public sf::Transformable {
 public:
 	void newPath() {
-		m_vertices.clear();
+		vertices.clear();
 
-		m_vertices.resize(n);
-		m_vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
+		vertices.resize(n);
+		vertices.setPrimitiveType(sf::PrimitiveType::LineStrip);
 
-		m_vertices[0] = {{(float)(screenWidth / 2), (float)(screenHeight / 2)}, sf::Color::White};
+		vertices[0] = {{(float)(screenWidth / 2), (float)(screenHeight / 2)}, sf::Color::White};
 
 		for (int i = 1; i < n; i++) {
 			sf::Color colour((uint32_t)(randomFloat(colourRng) * 255), (uint32_t)(randomFloat(colourRng) * 255), (uint32_t)(randomFloat(colourRng) * 255));
 
 			float angle = randomFloat(angleRng) * TAU;
 
-			const sf::Vertex& previous = m_vertices[i - 1];
+			const sf::Vertex& previous = vertices[i - 1];
 
 			float x = previous.position.x + step * std::sin(angle);
 			float y = previous.position.y + step * std::cos(angle);
 
-			m_vertices[i] = {{x, y}, colour};
+			vertices[i] = {{x, y}, colour};
 		}
 	}
 
@@ -54,7 +54,7 @@ public:
 private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
 		states.transform *= getTransform();
-		target.draw(m_vertices, states);
+		target.draw(vertices, states);
 	}
 
 	static float randomFloat(std::mt19937& rng) {
@@ -63,7 +63,7 @@ private:
 	}
 
 private:
-	sf::VertexArray m_vertices;
+	sf::VertexArray vertices;
 
 	std::mt19937 angleRng {seed};
 	std::mt19937 colourRng {seed};

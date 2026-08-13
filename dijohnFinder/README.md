@@ -1,2 +1,0 @@
-#random walk
-walking randomly.

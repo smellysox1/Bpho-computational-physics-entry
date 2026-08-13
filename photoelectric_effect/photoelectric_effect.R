@@ -1,6 +1,6 @@
 library(hash)
 
-electronCharge <- 1.6e-19   # C
+electronCharge <- 1.6e-19              # C
 h <- 6.626e-34                         # J s
 
 ag <- hash()
@@ -69,16 +69,15 @@ plotPhotoelectricEffect <- function(W, col, add) {
   )
 }
 
-graphExists <- FALSE
-for (mat in materials) {
-  plotPhotoelectricEffect(mat[["workFunction"]], mat[["colour"]], graphExists)
-  graphExists <- TRUE
-}
 
 matNames <- c()
 colours <- c()
 
+graphExists <- FALSE
 for (mat in materials) {
+  plotPhotoelectricEffect(mat[["workFunction"]], mat[["colour"]], graphExists)
+  graphExists <- TRUE
+  
   matNames <- c(matNames, mat[["name"]])
   colours <- c(colours, mat[["colour"]])
 }

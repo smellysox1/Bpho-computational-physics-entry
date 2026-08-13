@@ -8,6 +8,7 @@
 #include <cmath>
 
 #include "arrows.hpp"
+#include "lines.hpp"
 
 int windowWidth = 1600, windowHeight = 800;
 
@@ -56,6 +57,7 @@ int main() {
     ImGui_ImplOpenGL3_Init();
 
     arrows::initArrows();
+    lines::initLines();
 
     while (!glfwWindowShouldClose(window)) {
         glfwPollEvents();
@@ -95,6 +97,7 @@ int main() {
 
         ImGui::Render();
 
+        lines::drawLines();
         arrows::drawArrows(thetaRad, phiRad, windowWidth, windowHeight);
 
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
